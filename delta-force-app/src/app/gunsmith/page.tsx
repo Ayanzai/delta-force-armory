@@ -142,10 +142,7 @@ export default function GunsmithPage() {
                           className={`text-xs px-2 py-1 rounded-md border transition ${
                             isSel ? "border-sky-500 bg-sky-900/40 text-white" : "border-slate-700 bg-slate-700/30 text-slate-300 hover:bg-slate-700/60"
                           }`}>
-                          <div className="flex items-center gap-1">
-                            <img src={acc.pic} alt="" className="w-4 h-4 object-contain" />
-                            <span className="truncate max-w-[100px]">{acc.name}</span>
-                          </div>
+                          <div className="truncate max-w-[110px]">{acc.name}</div>
                           <div className="text-[10px] text-slate-500">
                             {hasPrice ? formatPrice(acc.price) : "—"} {pts > 0 && `·${pts}p`}
                           </div>
