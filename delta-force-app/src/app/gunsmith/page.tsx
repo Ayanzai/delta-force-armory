@@ -192,7 +192,7 @@ export default function GunsmithPage() {
               <tbody>
                 {tiers.map((tier) => {
                   const rec = tier.rec;
-                  if (Object.keys(rec.result).length === 0) return null;
+                  const hasAny = Object.keys(rec.result).length > 0;
                   const value = rec.pts > 0 ? (rec.cost / rec.pts).toFixed(0) : "—";
 
                   return (
@@ -200,14 +200,16 @@ export default function GunsmithPage() {
                       <td className="p-3 pl-4">
                         <div className="flex items-center gap-2">
                           <span className="font-medium text-yellow-400">{tier.label}</span>
-                          <button onClick={() => {
-                            const ns: Selection = {};
-                            for (const [k, v] of Object.entries(rec.result)) ns[k] = (v as any).id;
-                            setSelection(ns);
-                          }}
-                            className="text-[10px] bg-sky-600 hover:bg-sky-500 text-white px-1.5 py-0.5 rounded">
-                            应用
-                          </button>
+                          {hasAny && (
+                            <button onClick={() => {
+                              const ns: Selection = {};
+                              for (const [k, v] of Object.entries(rec.result)) ns[k] = (v as any).id;
+                              setSelection(ns);
+                            }}
+                              className="text-[10px] bg-sky-600 hover:bg-sky-500 text-white px-1.5 py-0.5 rounded">
+                              应用
+                            </button>
+                          )}
                         </div>
                         <div className="text-[10px] text-slate-500">{gun.name}</div>
                       </td>
@@ -216,18 +218,22 @@ export default function GunsmithPage() {
                         return (
                           <td key={sk} className="text-center p-2 text-xs">
                             {acc ? (
-                              <span className="text-slate-300 truncate block max-w-[80px] mx-auto">{acc.name}</span>
+                              <span className="text-slate-300 truncate block max-w-[80px] mx-auto" title={acc.name}>{acc.name}</span>
                             ) : (
                               <span className="text-slate-600">—</span>
                             )}
                           </td>
                         );
                       })}
-                      <td className="text-right p-3 font-mono text-yellow-400">{formatPrice(rec.cost)}</td>
+                      <td className="text-right p-3 font-mono text-yellow-400">{hasAny ? formatPrice(rec.cost) : <span className="text-slate-600">—</span>}</td>
                       <td className="text-right p-3 pr-4">
-                        <span className={`font-mono font-bold ${Number(value) < 10000 ? "text-green-400" : Number(value) < 30000 ? "text-yellow-400" : "text-red-400"}`}>
-                          {value}
-                        </span>
+                        {hasAny ? (
+                          <span className={`font-mono font-bold ${Number(value) < 10000 ? "text-green-400" : Number(value) < 30000 ? "text-yellow-400" : "text-red-400"}`}>
+                            {value}
+                          </span>
+                        ) : (
+                          <span className="text-slate-600">—</span>
+                        )}
                       </td>
                     </tr>
                   );
@@ -237,9 +243,9 @@ export default function GunsmithPage() {
           </div>
 
           {tiers.every((t) => Object.keys(t.rec.result).length === 0) && (
-            <div className="text-center text-slate-500 py-8 text-sm">
-              暂无推荐方案 — 需要等配件价格数据采集完成
-              <br />在项目目录运行：<code className="text-sky-400">node scripts/fetch_all_prices.js</code>
+            <div className="text-center text-slate-500 py-4 text-xs">
+              ⚠️ 配件价格数据不全，暂时无法生成推荐方案
+              <br />项目目录运行 <code className="text-sky-400">node scripts/fetch_all_prices.js</code> 采集价格
             </div>
           )}
         </>
