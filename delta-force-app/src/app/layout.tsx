@@ -26,6 +26,9 @@ export default function RootLayout({
             <Link href="/attachments" className="text-sm text-slate-300 hover:text-white transition">
               配件浏览
             </Link>
+            <Link href="/value" className="text-sm text-yellow-400 hover:text-yellow-300 transition">
+              性价比
+            </Link>
           </div>
         </nav>
         <main className="max-w-7xl mx-auto px-4 py-6">

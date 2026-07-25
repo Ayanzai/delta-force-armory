@@ -50,6 +50,8 @@ export interface Attachment {
   grade: number;
   weight: string;
   pic: string;
+  price?: number | null;
+  priceCurve?: Record<string, number | null>;
   stats: AttachmentStat;
   effectText: {
     advantage: string[];
@@ -92,8 +94,8 @@ export function getAttachmentTypeKeys(): string[] {
   return Object.keys(rawData.attachments);
 }
 
-export function formatPrice(price: number | null): string {
-  if (price === null) return '—';
+export function formatPrice(price: number | null | undefined): string {
+  if (price == null) return '—';
   return price.toLocaleString('zh-CN');
 }
 
