@@ -3,6 +3,60 @@
 import { useState, useMemo } from "react";
 import { getData, formatPrice } from "@/lib/data";
 
+// 枪械系列兼容性映射：配件的关键词前缀 → 适用的枪械名称关键词
+const GUN_FAMILIES: Record<string, string[]> = {
+  // AR系
+  "M4": ["M4A1", "K416"],
+  "AR": ["M4A1", "K416", "M7"],
+  // AK系
+  "AK": ["AK-12", "AKM"],
+  "AKM": ["AKM"],
+  "AKS": ["AK-12"],
+  "AK12": ["AK-12"],
+  "AK545": ["AK-12"],
+  "AK762": ["AKM"],
+  // 其他特定枪系
+  "M14": ["M14"],
+  "SR25": ["SR-25"],
+  "SCARH": ["SCAR-H"],
+  "G3": ["G3"],
+  "MP5": ["MP5"],
+  "MP7": ["MP7"],
+  "VSS": ["VSS"],
+  "ASh": ["ASh-12"],
+  "Vector": ["Vector"],
+  "R93": ["R93"],
+  "UZI": ["UZI"],
+  "SVD": ["SVD"],
+  "PKM": ["PKM"],
+  "M700": ["M700"],
+  "S12K": ["S12K"],
+  "SG552": ["SG552"],
+  "SMG45": ["SMG45"],
+  "PSG": ["PSG"],
+  "Mini": ["Mini-14"],
+  "aug": ["AUG"],
+  "野牛": ["野牛"],
+  "沙鹰": ["沙鹰"],
+  "93R": ["93R"],
+  "勇士": ["勇士"],
+  "G系": ["G系列"],
+};
+
+// 检查配件是否兼容当前枪械
+function isCompatible(gunName: string, accName: string): boolean {
+  // 只在弹匣、枪管、枪托这三种类型做过滤
+  // 通用配件（枪口、瞄具、握把等）全部显示
+  for (const [prefix, guns] of Object.entries(GUN_FAMILIES)) {
+    if (accName.includes(prefix)) {
+      // 配件标注了特定枪系，检查当前枪械是否属于该枪系
+      return guns.some((g) => gunName.includes(g));
+    }
+  }
+  // 配件名称中不包含任何特定枪系关键词 → 通用配件，兼容
+  return true;
+}
+
 const SLOT_MAP: Record<string, string> = {
   "2": "accMuzzle", "4": "accBarrel", "6": "accScope",
   "10": "accForeGrip", "11": "accBackGrip", "17": "accMagazine",
@@ -57,7 +111,7 @@ export default function GunsmithPage() {
     return [...keys].map((k) => ({
       key: k,
       name: SLOT_NAMES[k] || k,
-      items: data.attachments[k]?.items || [],
+      items: data.attachments[k]?.items.filter((a) => isCompatible(gun.name, a.name)) || [],
     }));
   }, [gun, data]);
 
