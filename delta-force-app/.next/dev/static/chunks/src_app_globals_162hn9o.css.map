@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///D:/code/DeltaForceAmmo/delta-force-app/src/app/globals.css"],"sourcesContent":["@import \"tailwindcss\";\n\n:root {\n  --bg-primary: #0f172a;\n  --bg-secondary: #1e293b;\n  --bg-card: #1e293b;\n  --text-primary: #f1f5f9;\n  --text-secondary: #94a3b8;\n  --accent: #38bdf8;\n  --accent-hover: #7dd3fc;\n  --border: #334155;\n  --grade-1: #94a3b8;\n  --grade-2: #22c55e;\n  --grade-3: #3b82f6;\n  --grade-4: #a855f7;\n  --grade-5: #f59e0b;\n  --grade-6: #ef4444;\n}\n\nbody {\n  background-color: var(--bg-primary);\n  color: var(--text-primary);\n  font-family: system-ui, -apple-system, sans-serif;\n}\n\n* {\n  box-sizing: border-box;\n}\n"],"names":[],"mappings":"AAEA;;;;;;;;;;;;;;;;;AAiBA;;;;;;AAMA"}}]
-}
