@@ -10,7 +10,7 @@ const SLOT_MAP: Record<string, string> = {
   "34": "accHandGuard", "35": "accHandGuard",
 };
 
-const ALL_SLOT_KEYS = ["accMuzzle", "accBarrel", "accHandGuard", "accForeGrip", "accBackGrip", "accMagazine", "accScope", "accStock", "accFunctional"];
+
 const SLOT_NAMES: Record<string, string> = {
   accMuzzle: "枪口", accBarrel: "枪管", accHandGuard: "护木",
   accForeGrip: "前握把", accBackGrip: "后握把", accMagazine: "弹匣",
@@ -54,7 +54,7 @@ export default function GunsmithPage() {
   const slots = useMemo(() => {
     if (!gun) return [];
     const keys = [...new Set(gun.accessorySlots.map((s) => SLOT_MAP[s]).filter(Boolean))];
-    return ALL_SLOT_KEYS.filter((k) => keys.includes(k)).map((k) => ({
+    return [...keys].map((k) => ({
       key: k,
       name: SLOT_NAMES[k] || k,
       items: data.attachments[k]?.items || [],
@@ -173,15 +173,9 @@ export default function GunsmithPage() {
               <thead>
                 <tr className="bg-slate-800 text-slate-400 text-xs">
                   <th className="text-left p-3 pl-4">方案</th>
-                  <th className="text-center p-3">枪口</th>
-                  <th className="text-center p-3">枪管</th>
-                  <th className="text-center p-3">护木</th>
-                  <th className="text-center p-3">前握把</th>
-                  <th className="text-center p-3">后握把</th>
-                  <th className="text-center p-3">弹匣</th>
-                  <th className="text-center p-3">瞄具</th>
-                  <th className="text-center p-3">枪托</th>
-                  <th className="text-center p-3">功能</th>
+                  {slots.map((s) => (
+                    <th key={s.key} className="text-center p-3">{s.name}</th>
+                  ))}
                   <th className="text-right p-3">总价</th>
                   <th className="text-right p-3 pr-4 text-yellow-400">性价比</th>
                 </tr>
@@ -210,10 +204,10 @@ export default function GunsmithPage() {
                         </div>
                         <div className="text-[10px] text-slate-500">{gun.name}</div>
                       </td>
-                      {ALL_SLOT_KEYS.map((sk) => {
-                        const acc = rec.result[sk] as any;
+                      {slots.map((sk) => {
+                        const acc = rec.result[sk.key] as any;
                         return (
-                          <td key={sk} className="text-center p-2 text-xs">
+                          <td key={sk.key} className="text-center p-2 text-xs">
                             {acc ? (
                               <span className="text-slate-300 truncate block max-w-[80px] mx-auto" title={acc.name}>{acc.name}</span>
                             ) : (
