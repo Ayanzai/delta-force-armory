@@ -29,6 +29,9 @@ export default function RootLayout({
             <Link href="/value" className="text-sm text-yellow-400 hover:text-yellow-300 transition">
               性价比
             </Link>
+            <Link href="/gunsmith" className="text-sm text-green-400 hover:text-green-300 transition">
+              改枪方案
+            </Link>
           </div>
         </nav>
         <main className="max-w-7xl mx-auto px-4 py-6">
