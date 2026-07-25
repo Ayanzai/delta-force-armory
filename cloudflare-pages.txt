@@ -1,0 +1,6 @@
+pages:
+  # 在 Cloudflare Pages 连接此仓库后，按以下设置：
+  # - Framework preset: Next.js (Static HTML Export)
+  # - Build command: cd delta-force-app && npm install && npm run build
+  # - Build output directory: /delta-force-app/out
+  # - Root directory: (leave empty)
