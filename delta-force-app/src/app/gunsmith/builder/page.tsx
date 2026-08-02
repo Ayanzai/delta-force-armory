@@ -260,7 +260,7 @@ export default function GunsmithBuilderPage() {
       </div>
 
       {gun && gunData ? (
-        <div className="grid grid-cols-1 gap-5 xl:grid-cols-[3fr_1fr]">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-[3fr_1fr]">
           {/* 左列：配置区 */}
           <div className="space-y-5">
           {/* 槽位选择表格 */}
