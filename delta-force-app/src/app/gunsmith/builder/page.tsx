@@ -2,8 +2,9 @@
 
 import { useState, useEffect, useMemo } from "react";
 import { getData, formatPrice, getGradeColor } from "@/lib/data";
+import { optimizeAdvanced, getPossibleRanges } from "@/lib/optimizer";
 import {
-  Crosshair, Fire, Target, Gauge, Speedometer, ShieldCheck, Coin,
+  Crosshair, Fire, Target, Gauge, Speedometer, ShieldCheck, Coin, Sparkle, Check,
 } from "@phosphor-icons/react";
 
 // ============ 类型定义 ============
@@ -118,6 +119,10 @@ export default function GunsmithBuilderPage() {
   const [selectedGun, setSelectedGun] = useState<number>(0);
   const [selected, setSelected] = useState<Record<string, string>>({});
   const mode = "warfare"; // 固定烽火地带模式
+  const [planRange, setPlanRange] = useState(0); // 方案射程过滤
+  const [planRecoil, setPlanRecoil] = useState(0);
+  const [planStable, setPlanStable] = useState(0);
+  const [planControl, setPlanControl] = useState(0);
 
   useEffect(() => {
     fetch("/data/gunsmith_full.json")
@@ -154,6 +159,31 @@ export default function GunsmithBuilderPage() {
 
   const filledCount = Object.values(selected).filter(Boolean).length;
   const gradeNum = (g: string) => parseInt(g, 10) || 0;
+
+  // 可能的射程
+  const possibleRanges = useMemo(() => (gun ? getPossibleRanges(gun, data) : []), [gun, data]);
+
+  // 生成改枪方案（带射程+属性过滤）
+  const plans = useMemo(() => {
+    if (!gun) return [];
+    return optimizeAdvanced(gun, data, {
+      minRange: planRange > 0 ? planRange : undefined,
+      minRecoil: planRecoil > 0 ? planRecoil : undefined,
+      minStable: planStable > 0 ? planStable : undefined,
+      minControl: planControl > 0 ? planControl : undefined,
+    });
+  }, [gun, data, planRange, planRecoil, planStable, planControl]);
+
+  // 把 optimizer 方案映射到 builder 槽位并应用
+  function applyPlan(build: any) {
+    const sel: Record<string, string> = {};
+    for (const [slotKey, accId] of Object.entries(build.selection)) {
+      const optIds = new Set((data.attachments[slotKey]?.items || []).map((a) => String(a.id)));
+      const target = slots.find((s) => s.candidateIds.some((id) => optIds.has(id)));
+      if (target) sel[target.id] = String(accId);
+    }
+    setSelected(sel);
+  }
 
   return (
     <div className="space-y-5">
@@ -193,6 +223,40 @@ export default function GunsmithBuilderPage() {
         </div>
         <div className="flex-1" />
         {!gunFull && <span className="text-xs text-slate-500">数据加载中...</span>}
+      </div>
+
+      {/* 方案过滤 */}
+      <div className="panel flex flex-wrap items-center gap-4 p-3">
+        <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-slate-500">
+          <Sparkle size={14} /> 生成方案
+        </span>
+        {possibleRanges.length > 0 && (
+          <label className="flex items-center gap-1.5 text-xs text-slate-500">
+            <Target size={13} />
+            射程
+            <select value={planRange} onChange={(e) => setPlanRange(Number(e.target.value))}
+              className="input px-2 py-1.5 text-sm">
+              <option value={0}>全部（基础{gun?.stats.shootDistance}）</option>
+              {possibleRanges.map((r) => <option key={r} value={r}>{r}</option>)}
+            </select>
+          </label>
+        )}
+        <label className="flex items-center gap-1.5 text-xs text-slate-500">
+          <Fire size={13} />后坐力≥
+          <input type="number" value={planRecoil} onChange={(e) => setPlanRecoil(Number(e.target.value))}
+            className="input w-14 px-2 py-1.5 text-center text-sm" />
+        </label>
+        <label className="flex items-center gap-1.5 text-xs text-slate-500">
+          <ShieldCheck size={13} />稳定≥
+          <input type="number" value={planStable} onChange={(e) => setPlanStable(Number(e.target.value))}
+            className="input w-14 px-2 py-1.5 text-center text-sm" />
+        </label>
+        <label className="flex items-center gap-1.5 text-xs text-slate-500">
+          <Speedometer size={13} />操控≥
+          <input type="number" value={planControl} onChange={(e) => setPlanControl(Number(e.target.value))}
+            className="input w-14 px-2 py-1.5 text-center text-sm" />
+        </label>
+        <span className="text-xs text-slate-600">共 {plans.length} 个方案</span>
       </div>
 
       {gun && gunData ? (
@@ -351,6 +415,49 @@ export default function GunsmithBuilderPage() {
                 <Coin size={13} />
                 <span className="num">{formatPrice(totalPrice)}</span>
               </span>
+            </div>
+          </div>
+
+          {/* 方案列表 */}
+          <div className="panel overflow-hidden">
+            <div className="flex items-center justify-between border-b px-4 py-3" style={{ borderColor: "var(--border)" }}>
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-500">改枪方案</h2>
+              <span className="text-xs text-slate-600">{plans.length} 个</span>
+            </div>
+            <div className="max-h-[420px] overflow-y-auto">
+              <table className="w-full">
+                <thead>
+                  <tr style={{ background: "var(--surface-2)" }}>
+                    <th className="table-head text-center">射程</th>
+                    <th className="table-head text-center">总价</th>
+                    <th className="table-head text-center">属性点</th>
+                    <th className="table-head text-center">性价比</th>
+                    <th className="table-head text-center">应用</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {plans.slice(0, 40).map((b, i) => (
+                    <tr key={i} className="row-hover">
+                      <td className="table-cell num text-center text-sky-400">{b.totalRange}</td>
+                      <td className="table-cell num text-center" style={{ color: "var(--accent)" }}>{formatPrice(b.totalPrice)}</td>
+                      <td className="table-cell num text-center font-bold" style={{ color: "var(--green)" }}>{b.totalPoints}</td>
+                      <td className="table-cell num text-center text-xs text-slate-400">{(b.valueScore || 0).toFixed(0)}</td>
+                      <td className="table-cell text-center">
+                        <button
+                          onClick={() => applyPlan(b)}
+                          className="rounded px-2 py-1 text-xs font-medium text-black transition hover:brightness-110"
+                          style={{ background: "var(--accent)" }}
+                        >
+                          应用
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                  {plans.length === 0 && (
+                    <tr><td colSpan={5} className="table-cell py-8 text-center text-xs text-slate-600">没有符合条件的方案，调整过滤条件</td></tr>
+                  )}
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
