@@ -144,7 +144,6 @@ export default function GunsmithBuilderPage() {
     const mods = part.modifiersByMode?.[mode] || [];
     return mods
       .filter((m) => !m.conditionId && m.delta != null && m.delta !== 0)
-      .slice(0, 3)
       .map((m) => `${m.name}${(m.delta as number) > 0 ? "+" : ""}${m.delta}`);
   };
 
@@ -250,7 +249,7 @@ export default function GunsmithBuilderPage() {
                                 <button
                                   key={part.id}
                                   onClick={() => setSelected((prev) => ({ ...prev, [slot.id]: isSel ? "" : part.id }))}
-                                  className="flex w-[84px] shrink-0 flex-col items-center rounded-lg px-1.5 pb-1.5 pt-2 text-center transition hover:brightness-110"
+                                  className="flex w-[96px] shrink-0 flex-col items-center rounded-lg px-1.5 pb-1.5 pt-2 text-center transition hover:brightness-110"
                                   style={{
                                     border: `1px solid ${isSel ? "var(--accent)" : "var(--border)"}`,
                                     background: isSel ? "var(--accent-soft)" : "var(--surface-1)",
@@ -258,7 +257,7 @@ export default function GunsmithBuilderPage() {
                                   title={part.name}
                                 >
                                   <span className="relative mb-1 flex items-center justify-center rounded-md"
-                                    style={{ background: "var(--surface-3)", width: 36, height: 36 }}>
+                                    style={{ background: "var(--surface-3)", width: 36, height: 36, margin: "0 auto 4px auto" }}>
                                     <img
                                       src={part.iconUrl}
                                       alt=""
@@ -273,10 +272,15 @@ export default function GunsmithBuilderPage() {
                                     {part.name}
                                   </div>
                                   {sum.length > 0 ? (
-                                    <div
-                                      style={{ display: "block", width: "100%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", fontSize: 10, lineHeight: 1.25, color: "var(--green)", marginTop: 2 }}
-                                    >
-                                      {sum[0]}
+                                    <div style={{ width: "100%", marginTop: 2 }}>
+                                      {sum.map((s, si) => (
+                                        <div
+                                          key={si}
+                                          style={{ display: "block", width: "100%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", fontSize: 10, lineHeight: 1.3, color: "var(--green)" }}
+                                        >
+                                          {s}
+                                        </div>
+                                      ))}
                                     </div>
                                   ) : (
                                     <div
