@@ -238,7 +238,7 @@ export default function GunsmithBuilderPage() {
                           )}
                         </td>
                         <td className="table-cell">
-                          <div className="flex flex-wrap gap-2">
+                          <div className="flex flex-wrap gap-1.5">
                             {candidates.map((part) => {
                               const isSel = selId === part.id;
                               const sum = partSummary(part);
@@ -248,40 +248,38 @@ export default function GunsmithBuilderPage() {
                                 <button
                                   key={part.id}
                                   onClick={() => setSelected((prev) => ({ ...prev, [slot.id]: isSel ? "" : part.id }))}
-                                  className="group w-[120px] shrink-0 rounded-lg p-2 text-left transition hover:-translate-y-0.5"
+                                  className="flex items-center gap-2 rounded-md py-1 pl-1.5 pr-2.5 text-left transition hover:brightness-110"
                                   style={{
                                     border: `1px solid ${isSel ? "var(--accent)" : "var(--border)"}`,
                                     background: isSel ? "var(--accent-soft)" : "var(--surface-1)",
-                                    boxShadow: isSel ? "0 0 0 1px var(--accent)" : "none",
                                   }}
                                   title={part.name}
                                 >
-                                  <div className="flex items-start justify-between">
-                                    <span className="flex h-7 w-7 items-center justify-center rounded"
-                                      style={{ background: "var(--surface-3)" }}>
-                                      <img src={part.iconUrl} alt="" className="h-5 w-5 object-contain" />
+                                  <span className="relative flex h-6 w-6 shrink-0 items-center justify-center rounded"
+                                    style={{ background: "var(--surface-3)" }}>
+                                    <img src={part.iconUrl} alt="" className="h-4 w-4 object-contain" />
+                                    <span className="absolute -right-0.5 -top-0.5 h-1.5 w-1.5 rounded-full"
+                                      style={{ background: grade }} />
+                                  </span>
+                                  <span className="min-w-0">
+                                    <span className="block truncate text-xs font-medium text-slate-200" style={{ maxWidth: 96 }}>
+                                      {part.name}
                                     </span>
-                                    <span className="mt-1 h-1.5 w-1.5 rounded-full" style={{ background: grade }} />
-                                  </div>
-                                  <div className="mt-1.5 truncate text-xs font-medium text-slate-200">{part.name}</div>
-                                  <div className="mt-1 min-h-[14px]">
-                                    {sum.length > 0 ? (
-                                      <span className="text-[10px] font-medium" style={{ color: "var(--green)" }}>
-                                        {sum.join(" · ")}
-                                      </span>
-                                    ) : (
-                                      <span className="text-[10px] text-slate-700">无属性加成</span>
-                                    )}
-                                  </div>
-                                  <div className="num mt-1 text-[10px] font-medium" style={{ color: isSel ? "var(--accent)" : "var(--text-dim)" }}>
-                                    {formatPrice(price)}
-                                  </div>
+                                    <span className="block text-[10px]">
+                                      {sum.length > 0 ? (
+                                        <span style={{ color: "var(--green)" }}>{sum[0]}</span>
+                                      ) : (
+                                        <span className="text-slate-700">无加成</span>
+                                      )}
+                                      <span className="num ml-1 text-slate-500">{formatPrice(price)}</span>
+                                    </span>
+                                  </span>
                                 </button>
                               );
                             })}
                             <button
                               onClick={() => setSelected((prev) => ({ ...prev, [slot.id]: "" }))}
-                              className="flex h-[92px] w-[120px] shrink-0 flex-col items-center justify-center gap-1 rounded-lg border border-dashed text-xs text-slate-600 transition hover:text-slate-400"
+                              className="flex h-[38px] items-center rounded-md border border-dashed px-2.5 text-xs text-slate-600 transition hover:text-slate-400"
                               style={{ borderColor: "var(--border-strong)" }}
                             >
                               空槽
