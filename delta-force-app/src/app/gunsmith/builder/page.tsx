@@ -238,7 +238,10 @@ export default function GunsmithBuilderPage() {
                           )}
                         </td>
                         <td className="table-cell">
-                          <div className="flex flex-wrap gap-1.5">
+                          <div
+                            className="flex flex-nowrap items-center gap-1.5 overflow-x-auto pb-1"
+                            style={{ scrollbarWidth: "thin" }}
+                          >
                             {candidates.map((part) => {
                               const isSel = selId === part.id;
                               const sum = partSummary(part);
