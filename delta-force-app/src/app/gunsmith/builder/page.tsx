@@ -116,8 +116,8 @@ export default function GunsmithBuilderPage() {
   const data = getData();
   const [gunFull, setGunFull] = useState<GunFull | null>(null);
   const [selectedGun, setSelectedGun] = useState<number>(0);
-  const [mode, setMode] = useState<"warfare" | "operations">("warfare");
   const [selected, setSelected] = useState<Record<string, string>>({});
+  const mode = "warfare"; // 固定烽火地带模式
 
   useEffect(() => {
     fetch("/data/gunsmith_full.json")
@@ -191,18 +191,7 @@ export default function GunsmithBuilderPage() {
             ))}
           </select>
         </div>
-        <div className="flex gap-1 rounded-md p-0.5" style={{ background: "var(--surface-1)", border: "1px solid var(--border)" }}>
-          {(["warfare", "operations"] as const).map((m) => (
-            <button
-              key={m}
-              onClick={() => setMode(m)}
-              className={`rounded px-3 py-1.5 text-[13px] transition ${mode === m ? "text-black" : "text-slate-400 hover:text-white"}`}
-              style={mode === m ? { background: "var(--accent)" } : {}}
-            >
-              {m === "warfare" ? "烽火地带" : "全面战场"}
-            </button>
-          ))}
-        </div>
+        <div className="flex-1" />
         {!gunFull && <span className="text-xs text-slate-500">数据加载中...</span>}
       </div>
 
@@ -357,7 +346,7 @@ export default function GunsmithBuilderPage() {
             </div>
             <div className="mt-5 flex items-center justify-between border-t pt-4 text-xs text-slate-500"
               style={{ borderColor: "var(--border)" }}>
-              <span>{mode === "warfare" ? "烽火地带" : "全面战场"}模式</span>
+              <span>烽火地带模式</span>
               <span className="flex items-center gap-1">
                 <Coin size={13} />
                 <span className="num">{formatPrice(totalPrice)}</span>
