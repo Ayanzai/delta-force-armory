@@ -30,7 +30,10 @@ export default function RootLayout({
               性价比
             </Link>
             <Link href="/gunsmith" className="text-sm text-green-400 hover:text-green-300 transition">
-              改枪方案
+              改枪排行
+            </Link>
+            <Link href="/gunsmith/builder" className="text-sm text-orange-400 hover:text-orange-300 transition">
+              改枪配置器
             </Link>
           </div>
         </nav>
