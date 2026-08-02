@@ -89,7 +89,7 @@ export default function GunsContent() {
                 className="border-t border-slate-700 hover:bg-slate-700/50 cursor-pointer transition">
                 <td className="p-3 pl-4">
                   <div className="flex items-center gap-3">
-                    <img src={gun.pic} alt="" className="w-9 h-9 object-contain" />
+                    <img src={gun.pic} alt="" className="w-8 h-8 object-contain" />
                     <span className="font-medium truncate max-w-[180px]">{gun.name}</span>
                   </div>
                 </td>

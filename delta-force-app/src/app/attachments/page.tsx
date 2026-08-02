@@ -107,7 +107,7 @@ export default function AttachmentsPage() {
                 <tr key={acc.id} className="border-t border-slate-700 hover:bg-slate-700/50 transition">
                   <td className="p-3 pl-4">
                     <div className="flex items-center gap-3">
-                      <img src={acc.pic} alt="" className="w-8 h-8 object-contain" />
+                      <img src={acc.pic} alt="" className="w-6 h-6 object-contain" />
                       <span className="font-medium truncate max-w-[200px]">{acc.name}</span>
                     </div>
                   </td>

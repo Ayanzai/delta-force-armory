@@ -259,9 +259,9 @@ export default function GunsmithBuilderPage() {
                     <span className="w-14 shrink-0 text-xs font-medium text-slate-500">{slot.label}</span>
                     {selPart ? (
                       <>
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md"
+                        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md"
                           style={{ background: "var(--surface-3)" }}>
-                          <img src={selPart.iconUrl} alt="" className="h-7 w-7 object-contain" />
+                          <img src={selPart.iconUrl} alt="" className="h-5 w-5 object-contain" />
                         </span>
                         <span className="flex-1 truncate text-sm">{selPart.name}</span>
                         <span className="num shrink-0 text-xs" style={{ color: "var(--accent)" }}>
@@ -272,7 +272,7 @@ export default function GunsmithBuilderPage() {
                       <>
                         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md"
                           style={{ background: "var(--surface-2)" }}>
-                          <Plus size={16} className="text-slate-600" />
+                          <Plus size={14} className="text-slate-600" />
                         </span>
                         <span className="flex-1 text-sm text-slate-600">未安装</span>
                         <span className="shrink-0 text-slate-600 opacity-0 transition group-hover:opacity-100">
@@ -398,9 +398,9 @@ export default function GunsmithBuilderPage() {
                     className="group flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left transition hover:bg-white/4"
                     style={{ border: "1px solid var(--border)", background: "var(--surface-1)" }}
                   >
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md"
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md"
                       style={{ background: "var(--surface-3)" }}>
-                      <img src={part.iconUrl} alt="" className="h-8 w-8 object-contain" />
+                      <img src={part.iconUrl} alt="" className="h-6 w-6 object-contain" />
                     </span>
                     <span className="flex-1 min-w-0">
                       <span className="flex items-center gap-2">
