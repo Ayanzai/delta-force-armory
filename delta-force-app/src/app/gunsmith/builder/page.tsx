@@ -225,6 +225,7 @@ export default function GunsmithBuilderPage() {
                     const candidates = slot.candidateIds
                       .map((id) => gunData.parts?.[id])
                       .filter((p): p is Part => !!p && !p.isVirtual);
+                    if (candidates.length === 0) return null; // 无可选配件则隐藏该槽位
                     return (
                       <tr key={slot.id + slot.label} className="row-hover align-top">
                         <td className="table-cell">
