@@ -26,7 +26,7 @@ export default function RootLayout({
       <body>
         <header className="sticky top-0 z-50 border-b backdrop-blur-md"
           style={{ borderColor: "var(--border)", background: "rgba(11,15,20,0.85)" }}>
-          <div className="mx-auto flex h-14 max-w-[1440px] items-center gap-1 px-4">
+          <div className="flex h-14 w-full items-center gap-1 px-4">
             <Link href="/" className="mr-4 flex items-center gap-2">
               <span className="flex h-7 w-7 items-center justify-center rounded-md"
                 style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
@@ -48,7 +48,7 @@ export default function RootLayout({
             </nav>
           </div>
         </header>
-        <main className="mx-auto max-w-[1440px] px-4 py-6">{children}</main>
+        <main className="w-full px-4 py-6">{children}</main>
       </body>
     </html>
   );
