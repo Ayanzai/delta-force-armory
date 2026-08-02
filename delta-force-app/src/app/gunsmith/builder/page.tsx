@@ -258,11 +258,11 @@ export default function GunsmithBuilderPage() {
                                   title={part.name}
                                 >
                                   <span className="relative mb-1 flex items-center justify-center rounded-md"
-                                    style={{ background: "var(--surface-3)", width: 32, height: 32 }}>
+                                    style={{ background: "var(--surface-3)", width: 36, height: 36 }}>
                                     <img
                                       src={part.iconUrl}
                                       alt=""
-                                      style={{ width: 24, height: 24, objectFit: "contain", display: "block" }}
+                                      style={{ width: 28, height: 28, objectFit: "contain", display: "block" }}
                                     />
                                     <span className="absolute -right-0.5 -top-0.5 h-1.5 w-1.5 rounded-full"
                                       style={{ background: grade }} />
