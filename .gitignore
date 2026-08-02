@@ -7,3 +7,4 @@ delta-force-app/out/
 *.tsbuildinfo
 next-env.d.ts
 data/.kkrb_cookies.txt
+delta-force-app/public/data/*.gz
