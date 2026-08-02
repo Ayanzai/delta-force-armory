@@ -212,12 +212,11 @@ export default function GunsmithBuilderPage() {
           {/* 左：槽位选择表格 */}
           <div className="panel overflow-hidden">
             <div className="overflow-x-auto">
-              <table className="w-full" style={{ tableLayout: "fixed" }}>
+              <table className="w-full">
                 <thead>
                   <tr style={{ background: "var(--surface-2)" }}>
-                    <th className="table-head w-[100px]">槽位</th>
+                    <th className="table-head w-[64px]">槽位</th>
                     <th className="table-head">可选配件（点击选择）</th>
-                    <th className="table-head w-[90px] text-right">价格</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -258,23 +257,22 @@ export default function GunsmithBuilderPage() {
                                   }}
                                   title={part.name}
                                 >
-                                  <span className="relative flex h-6 w-6 shrink-0 items-center justify-center rounded"
+                                  <span className="relative flex h-5 w-5 shrink-0 items-center justify-center rounded"
                                     style={{ background: "var(--surface-3)" }}>
-                                    <img src={part.iconUrl} alt="" className="h-4 w-4 object-contain" />
-                                    <span className="absolute -right-0.5 -top-0.5 h-1.5 w-1.5 rounded-full"
+                                    <img src={part.iconUrl} alt="" className="h-3.5 w-3.5 object-contain" />
+                                    <span className="absolute -right-0.5 -top-0.5 h-1 w-1 rounded-full"
                                       style={{ background: grade }} />
                                   </span>
                                   <span className="min-w-0">
-                                    <span className="block truncate text-xs font-medium text-slate-200" style={{ maxWidth: 96 }}>
+                                    <span className="block truncate text-xs font-medium text-slate-200" style={{ maxWidth: 64 }}>
                                       {part.name}
                                     </span>
-                                    <span className="block text-[10px]">
+                                    <span className="block truncate text-[10px]" style={{ maxWidth: 64 }}>
                                       {sum.length > 0 ? (
                                         <span style={{ color: "var(--green)" }}>{sum[0]}</span>
                                       ) : (
                                         <span className="text-slate-700">无加成</span>
                                       )}
-                                      <span className="num ml-1 text-slate-500">{formatPrice(price)}</span>
                                     </span>
                                   </span>
                                 </button>
@@ -282,21 +280,18 @@ export default function GunsmithBuilderPage() {
                             })}
                             <button
                               onClick={() => setSelected((prev) => ({ ...prev, [slot.id]: "" }))}
-                              className="flex h-[38px] items-center rounded-md border border-dashed px-2.5 text-xs text-slate-600 transition hover:text-slate-400"
+                              className="flex h-[34px] shrink-0 items-center rounded-md border border-dashed px-2 text-xs text-slate-600 transition hover:text-slate-400"
                               style={{ borderColor: "var(--border-strong)" }}
                             >
                               空槽
                             </button>
                           </div>
                         </td>
-                        <td className="table-cell num text-right text-xs" style={{ color: selPart ? "var(--accent)" : "var(--text-faint)" }}>
-                          {selPart ? formatPrice(priceOf(selPart.id)) : "—"}
-                        </td>
                       </tr>
                     );
                   })}
                   {slots.length === 0 && (
-                    <tr><td className="table-cell py-10 text-center text-sm text-slate-600" colSpan={3}>该枪械暂无槽位数据</td></tr>
+                    <tr><td className="table-cell py-10 text-center text-sm text-slate-600" colSpan={2}>该枪械暂无槽位数据</td></tr>
                   )}
                 </tbody>
               </table>
