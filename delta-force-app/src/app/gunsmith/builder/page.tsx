@@ -116,7 +116,7 @@ function extractSlots(gunData: GunData): SlotDef[] {
 export default function GunsmithBuilderPage() {
   const data = getData();
   const [gunFull, setGunFull] = useState<GunFull | null>(null);
-  const [selectedGun, setSelectedGun] = useState<number>(0);
+  const [selectedGun, setSelectedGun] = useState<number>(data.guns[0]?.id || 0);
   const [selected, setSelected] = useState<Record<string, string>>({});
   const mode = "warfare"; // 固定烽火地带模式
   const [planRange, setPlanRange] = useState(0); // 方案射程过滤
@@ -164,14 +164,22 @@ export default function GunsmithBuilderPage() {
   const possibleRanges = useMemo(() => (gun ? getPossibleRanges(gun, data) : []), [gun, data]);
 
   // 生成改枪方案（带射程+属性过滤）
+  const [planError, setPlanError] = useState<string | null>(null);
   const plans = useMemo(() => {
     if (!gun) return [];
-    return optimizeAdvanced(gun, data, {
-      minRange: planRange > 0 ? planRange : undefined,
-      minRecoil: planRecoil > 0 ? planRecoil : undefined,
-      minStable: planStable > 0 ? planStable : undefined,
-      minControl: planControl > 0 ? planControl : undefined,
-    });
+    try {
+      setPlanError(null);
+      const result = optimizeAdvanced(gun, data, {
+        minRange: planRange > 0 ? planRange : undefined,
+        minRecoil: planRecoil > 0 ? planRecoil : undefined,
+        minStable: planStable > 0 ? planStable : undefined,
+        minControl: planControl > 0 ? planControl : undefined,
+      });
+      return result;
+    } catch (e: any) {
+      setPlanError(String(e?.message || e));
+      return [];
+    }
   }, [gun, data, planRange, planRecoil, planStable, planControl]);
 
   // 把 optimizer 方案映射到 builder 槽位并应用
@@ -425,8 +433,7 @@ export default function GunsmithBuilderPage() {
           <div className="panel overflow-hidden">
             <div className="flex items-center justify-between border-b px-4 py-3" style={{ borderColor: "var(--border)" }}>
               <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-500">改枪方案</h2>
-              <span className="text-xs text-slate-600">{plans.length} 个</span>
-            </div>
+              <span className="text-xs text-slate-600">{plans.length} 个</span>            </div>
             <div className="max-h-[420px] overflow-y-auto">
               <table className="w-full">
                 <thead>
@@ -457,7 +464,9 @@ export default function GunsmithBuilderPage() {
                     </tr>
                   ))}
                   {plans.length === 0 && (
-                    <tr><td colSpan={5} className="table-cell py-8 text-center text-xs text-slate-600">没有符合条件的方案，调整过滤条件</td></tr>
+                    <tr><td colSpan={5} className="table-cell py-8 text-center text-xs text-slate-600">
+                      {planError ? `生成出错: ${planError}` : "没有符合条件的方案，调整过滤条件"}
+                    </td></tr>
                   )}
                 </tbody>
               </table>
