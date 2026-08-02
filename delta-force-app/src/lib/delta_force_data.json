@@ -13205,6 +13205,219 @@
             "sevenDayHigh": 14156,
             "updatedAt": "2026-08-02 11:24"
           }
+        },
+        {
+          "id": 13130000224,
+          "name": "FFC双流制退器",
+          "type": "枪口",
+          "typeKey": "accMuzzle",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13130000224.png",
+          "price": 48496,
+          "priceInfo": {
+            "basePrice": 52262,
+            "yesterdayAvg": 48374,
+            "sevenDayLow": 44086,
+            "sevenDayHigh": 61726,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 10,
+            "controlSpeed": -6,
+            "controlStable": 3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13130000208,
+          "name": "先进多口径消音器",
+          "type": "枪口",
+          "typeKey": "accMuzzle",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13130000208.png",
+          "price": 44361,
+          "priceInfo": {
+            "basePrice": 48893,
+            "yesterdayAvg": 44354,
+            "sevenDayLow": 42586,
+            "sevenDayHigh": 67436,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 9,
+            "recoil": 6,
+            "controlSpeed": -6
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13130000209,
+          "name": "薪火螺旋消焰器",
+          "type": "枪口",
+          "typeKey": "accMuzzle",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13130000209.png",
+          "price": 21014,
+          "priceInfo": {
+            "basePrice": 21114,
+            "yesterdayAvg": 21240,
+            "sevenDayLow": 18534,
+            "sevenDayHigh": 32174,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlStable": 1,
+            "recoil": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13130000216,
+          "name": "725双管霰弹枪牛仔消音器",
+          "type": "枪口",
+          "typeKey": "accMuzzle",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13130000216.png",
+          "price": 31046,
+          "priceInfo": {
+            "basePrice": 31189,
+            "yesterdayAvg": 29703,
+            "sevenDayLow": 26381,
+            "sevenDayHigh": 35711,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 8,
+            "controlSpeed": -8,
+            "controlStable": -3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13130000229,
+          "name": "蛛网钛制制退器",
+          "type": "枪口",
+          "typeKey": "accMuzzle",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13130000229.png",
+          "price": 32242,
+          "priceInfo": {
+            "basePrice": 31097,
+            "yesterdayAvg": 32239,
+            "sevenDayLow": 31127,
+            "sevenDayHigh": 32242,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 5,
+            "hipShot": 4,
+            "controlStable": -2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13130000235,
+          "name": "RM277断流消音器",
+          "type": "枪口",
+          "typeKey": "accMuzzle",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13130000235.png",
+          "price": 36809,
+          "priceInfo": {
+            "basePrice": 41686,
+            "yesterdayAvg": 36800,
+            "sevenDayLow": 31729,
+            "sevenDayHigh": 57129,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 9,
+            "recoil": 5,
+            "controlSpeed": -2,
+            "hipShot": -8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13130000211,
+          "name": "SR-3M隐击消音器",
+          "type": "枪口",
+          "typeKey": "accMuzzle",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13130000211.png",
+          "price": 35905,
+          "priceInfo": {
+            "basePrice": 35714,
+            "yesterdayAvg": 36627,
+            "sevenDayLow": 29480,
+            "sevenDayHigh": 37190,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 9,
+            "recoil": 4,
+            "controlSpeed": -3,
+            "controlStable": 2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13130000227,
+          "name": "杠杆式步枪守望者钢制制退器",
+          "type": "枪口",
+          "typeKey": "accMuzzle",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13130000227.png",
+          "price": 24534,
+          "priceInfo": {
+            "basePrice": 25492,
+            "yesterdayAvg": 24319,
+            "sevenDayLow": 19409,
+            "sevenDayHigh": 26584,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 9,
+            "controlSpeed": -2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
         }
       ]
     },
@@ -13842,6 +14055,62 @@
             "sevenDayLow": 3546,
             "sevenDayHigh": 3554,
             "updatedAt": "2026-08-02 11:21"
+          }
+        },
+        {
+          "id": 13140000043,
+          "name": "EC通用前阻手",
+          "type": "前握把",
+          "typeKey": "accForeGrip",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13140000043.png",
+          "price": 51434,
+          "priceInfo": {
+            "basePrice": 49564,
+            "yesterdayAvg": 51429,
+            "sevenDayLow": 49659,
+            "sevenDayHigh": 51434,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -4,
+            "hipShot": 8,
+            "controlSpeed": 4,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13140000044,
+          "name": "共振三代握把",
+          "type": "前握把",
+          "typeKey": "accForeGrip",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13140000044.png",
+          "price": 51434,
+          "priceInfo": {
+            "basePrice": 49086,
+            "yesterdayAvg": 51241,
+            "sevenDayLow": 44334,
+            "sevenDayHigh": 51434,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 2,
+            "hipShot": 8,
+            "controlSpeed": -2,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
           }
         }
       ]
@@ -14637,6 +14906,374 @@
             "sevenDayLow": 9510,
             "sevenDayHigh": 20640,
             "updatedAt": "2026-08-02 11:21"
+          }
+        },
+        {
+          "id": 13030000187,
+          "name": "AR MOE后握把",
+          "type": "后握把",
+          "typeKey": "accBackGrip",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13030000187.png",
+          "price": 22117,
+          "priceInfo": {
+            "basePrice": 23815,
+            "yesterdayAvg": 21562,
+            "sevenDayLow": 19222,
+            "sevenDayHigh": 25012,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 3,
+            "controlStable": 3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13030000191,
+          "name": "模块化AR后握把",
+          "type": "后握把",
+          "typeKey": "accBackGrip",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13030000191.png",
+          "price": 32296,
+          "priceInfo": {
+            "basePrice": 31213,
+            "yesterdayAvg": 32296,
+            "sevenDayLow": 31181,
+            "sevenDayHigh": 32296,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 2,
+            "controlSpeed": 2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13030000194,
+          "name": "侍卫稳固后握把",
+          "type": "后握把",
+          "typeKey": "accBackGrip",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13030000194.png",
+          "price": 33109,
+          "priceInfo": {
+            "basePrice": 38489,
+            "yesterdayAvg": 32167,
+            "sevenDayLow": 22319,
+            "sevenDayHigh": 45559,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 6
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13030000198,
+          "name": "M249蝎尾握把",
+          "type": "后握把",
+          "typeKey": "accBackGrip",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13030000198.png",
+          "price": 21732,
+          "priceInfo": {
+            "basePrice": 25468,
+            "yesterdayAvg": 20472,
+            "sevenDayLow": 16612,
+            "sevenDayHigh": 37092,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -4,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13030000185,
+          "name": "M1911夜鹰战术后握把",
+          "type": "后握把",
+          "typeKey": "accBackGrip",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13030000185.png",
+          "price": 5702,
+          "priceInfo": {
+            "basePrice": 5614,
+            "yesterdayAvg": 5702,
+            "sevenDayLow": 5702,
+            "sevenDayHigh": 5702,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 2,
+            "controlSpeed": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13030000106,
+          "name": "G3后握把",
+          "type": "后握把",
+          "typeKey": "accBackGrip",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13030000106.png",
+          "price": 22490,
+          "priceInfo": {
+            "basePrice": 21852,
+            "yesterdayAvg": 22486,
+            "sevenDayLow": 20760,
+            "sevenDayHigh": 22490,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 2,
+            "controlSpeed": 2,
+            "controlStable": 2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13030000164,
+          "name": "MP7平衡后握把",
+          "type": "后握把",
+          "typeKey": "accBackGrip",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13030000164.png",
+          "price": 51551,
+          "priceInfo": {
+            "basePrice": 49344,
+            "yesterdayAvg": 51489,
+            "sevenDayLow": 46211,
+            "sevenDayHigh": 51551,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 2,
+            "controlSpeed": 2,
+            "controlStable": 1,
+            "hipShot": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13030000165,
+          "name": "MP7稳固后握把",
+          "type": "后握把",
+          "typeKey": "accBackGrip",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13030000165.png",
+          "price": 40878,
+          "priceInfo": {
+            "basePrice": 30293,
+            "yesterdayAvg": 40539,
+            "sevenDayLow": 23078,
+            "sevenDayHigh": 51558,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 6,
+            "controlSpeed": -4,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13030000180,
+          "name": "新式尖兵轻型握把",
+          "type": "后握把",
+          "typeKey": "accBackGrip",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13030000180.png",
+          "price": 22056,
+          "priceInfo": {
+            "basePrice": 24652,
+            "yesterdayAvg": 22039,
+            "sevenDayLow": 20136,
+            "sevenDayHigh": 46056,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 3,
+            "controlSpeed": 7,
+            "controlStable": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13030000181,
+          "name": "新式侍剑重型握把",
+          "type": "后握把",
+          "typeKey": "accBackGrip",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13030000181.png",
+          "price": 31767,
+          "priceInfo": {
+            "basePrice": 36647,
+            "yesterdayAvg": 27986,
+            "sevenDayLow": 25977,
+            "sevenDayHigh": 53962,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 6,
+            "controlSpeed": -4,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13030000189,
+          "name": "兵锋新式握把",
+          "type": "后握把",
+          "typeKey": "accBackGrip",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13030000189.png",
+          "price": 42382,
+          "priceInfo": {
+            "basePrice": 50120,
+            "yesterdayAvg": 43201,
+            "sevenDayLow": 37557,
+            "sevenDayHigh": 60717,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -2,
+            "recoil": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13030000184,
+          "name": "SVD握把转接",
+          "type": "后握把",
+          "typeKey": "accBackGrip",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13030000184.png",
+          "price": 7915,
+          "priceInfo": {
+            "basePrice": 7716,
+            "yesterdayAvg": 8253,
+            "sevenDayLow": 6760,
+            "sevenDayHigh": 18080,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": 1
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13030000205,
+          "name": "SVCH镂空后握把",
+          "type": "后握把",
+          "typeKey": "accBackGrip",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13030000205.png",
+          "price": 24851,
+          "priceInfo": {
+            "basePrice": 23319,
+            "yesterdayAvg": 24851,
+            "sevenDayLow": 23071,
+            "sevenDayHigh": 24851,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "recoil": 3,
+            "controlSpeed": 5,
+            "controlStable": -2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13030000207,
+          "name": "SVCH稳固后握把",
+          "type": "后握把",
+          "typeKey": "accBackGrip",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13030000207.png",
+          "price": 51528,
+          "priceInfo": {
+            "basePrice": 49232,
+            "yesterdayAvg": 51434,
+            "sevenDayLow": 44408,
+            "sevenDayHigh": 51528,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "recoil": 5,
+            "controlSpeed": -5,
+            "controlStable": 6
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
           }
         }
       ]
@@ -18158,6 +18795,1376 @@
             "sevenDayHigh": 8018,
             "updatedAt": "2026-08-02 11:24"
           }
+        },
+        {
+          "id": 13020000539,
+          "name": "725双管霰弹枪拦截者截短枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000539.png",
+          "price": 27071,
+          "priceInfo": {
+            "basePrice": 26605,
+            "yesterdayAvg": 26513,
+            "sevenDayLow": 21846,
+            "sevenDayHigh": 27071,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": -9,
+            "recoil": -2,
+            "controlSpeed": 10,
+            "controlStable": -2,
+            "hipShot": 12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000550,
+          "name": "725双管霰弹枪鹰隼长枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000550.png",
+          "price": 29143,
+          "priceInfo": {
+            "basePrice": 34755,
+            "yesterdayAvg": 27506,
+            "sevenDayLow": 18023,
+            "sevenDayHigh": 36093,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 10,
+            "controlSpeed": -10,
+            "controlStable": 6,
+            "hipShot": -12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000561,
+          "name": "AS Val刺客高级枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000561.png",
+          "price": 103321,
+          "priceInfo": {
+            "basePrice": 99675,
+            "yesterdayAvg": 101816,
+            "sevenDayLow": 81931,
+            "sevenDayHigh": 103321,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 10,
+            "recoil": 8,
+            "hipShot": -16,
+            "controlSpeed": -4,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000569,
+          "name": "ASH-12战斧重型枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000569.png",
+          "price": 51683,
+          "priceInfo": {
+            "basePrice": 50048,
+            "yesterdayAvg": 51663,
+            "sevenDayLow": 48113,
+            "sevenDayHigh": 51683,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 10,
+            "hipShot": -16,
+            "controlSpeed": -4,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000592,
+          "name": "AR57激流超长枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000592.png",
+          "price": 44567,
+          "priceInfo": {
+            "basePrice": 33682,
+            "yesterdayAvg": 43509,
+            "sevenDayLow": 26717,
+            "sevenDayHigh": 51707,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 10,
+            "controlSpeed": -10,
+            "controlStable": 6,
+            "hipShot": -12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000593,
+          "name": "夜莺一体消音组合",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000593.png",
+          "price": 49898,
+          "priceInfo": {
+            "basePrice": 49858,
+            "yesterdayAvg": 51386,
+            "sevenDayLow": 39188,
+            "sevenDayHigh": 51683,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 9,
+            "recoil": 6,
+            "controlSpeed": -2,
+            "controlStable": 6,
+            "hipShot": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000578,
+          "name": "FS-12剑冢长枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000578.png",
+          "price": 23448,
+          "priceInfo": {
+            "basePrice": 23167,
+            "yesterdayAvg": 23446,
+            "sevenDayLow": 22638,
+            "sevenDayHigh": 23448,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 5,
+            "controlSpeed": 4,
+            "controlStable": -8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000476,
+          "name": "G17轻量化枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000476.png",
+          "price": 6997,
+          "priceInfo": {
+            "basePrice": 10109,
+            "yesterdayAvg": 7489,
+            "sevenDayLow": 5017,
+            "sevenDayHigh": 11122,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 2,
+            "controlSpeed": 6,
+            "controlStable": -6,
+            "hipShot": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000477,
+          "name": "G17战术重枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000477.png",
+          "price": 7831,
+          "priceInfo": {
+            "basePrice": 11685,
+            "yesterdayAvg": 8719,
+            "sevenDayLow": 5851,
+            "sevenDayHigh": 12451,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 9,
+            "recoil": 6,
+            "controlSpeed": -5,
+            "controlStable": 3,
+            "hipShot": -12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000552,
+          "name": "KC17长剑枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000552.png",
+          "price": 67750,
+          "priceInfo": {
+            "basePrice": 49199,
+            "yesterdayAvg": 68966,
+            "sevenDayLow": 42150,
+            "sevenDayHigh": 75430,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 10,
+            "controlSpeed": -10,
+            "controlStable": 6,
+            "hipShot": -12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000553,
+          "name": "KC17短刃枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000553.png",
+          "price": 37212,
+          "priceInfo": {
+            "basePrice": 35798,
+            "yesterdayAvg": 37137,
+            "sevenDayLow": 33357,
+            "sevenDayHigh": 37212,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 4,
+            "controlSpeed": 6,
+            "controlStable": -6,
+            "hipShot": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000554,
+          "name": "KC17影舞者消音",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000554.png",
+          "price": 33305,
+          "priceInfo": {
+            "basePrice": 31343,
+            "yesterdayAvg": 33282,
+            "sevenDayLow": 28175,
+            "sevenDayHigh": 33305,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 9,
+            "recoil": 8,
+            "controlSpeed": -3,
+            "controlStable": 4,
+            "hipShot": -16
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000541,
+          "name": "K437断刃短枪管组合",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000541.png",
+          "price": 42758,
+          "priceInfo": {
+            "basePrice": 28620,
+            "yesterdayAvg": 29862,
+            "sevenDayLow": 23123,
+            "sevenDayHigh": 51683,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 4,
+            "controlSpeed": 6,
+            "controlStable": -6,
+            "hipShot": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000543,
+          "name": "K437长矛手长枪管组合",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000543.png",
+          "price": 83837,
+          "priceInfo": {
+            "basePrice": 33721,
+            "yesterdayAvg": 54006,
+            "sevenDayLow": 32072,
+            "sevenDayHigh": 85622,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 10,
+            "controlSpeed": -10,
+            "controlStable": 6,
+            "hipShot": -12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000546,
+          "name": "K437特攻一体消音枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000546.png",
+          "price": 46052,
+          "priceInfo": {
+            "basePrice": 40052,
+            "yesterdayAvg": 43412,
+            "sevenDayLow": 38952,
+            "sevenDayHigh": 46052,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 9,
+            "recoil": 8,
+            "controlSpeed": -3,
+            "controlStable": 4,
+            "hipShot": -16
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000520,
+          "name": "M250侍卫短枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000520.png",
+          "price": 51683,
+          "priceInfo": {
+            "basePrice": 49532,
+            "yesterdayAvg": 51561,
+            "sevenDayLow": 46328,
+            "sevenDayHigh": 51683,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 4,
+            "controlSpeed": 6,
+            "controlStable": -6,
+            "hipShot": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000524,
+          "name": "M250钛金长枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000524.png",
+          "price": 98117,
+          "priceInfo": {
+            "basePrice": 75404,
+            "yesterdayAvg": 91387,
+            "sevenDayLow": 65987,
+            "sevenDayHigh": 99902,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 7,
+            "controlSpeed": -10,
+            "controlStable": 6,
+            "hipShot": -12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000590,
+          "name": "M249H.A.V.K链锯套件",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000590.png",
+          "price": 184741,
+          "priceInfo": {
+            "basePrice": 199244,
+            "yesterdayAvg": null,
+            "sevenDayLow": 111591,
+            "sevenDayHigh": 207841,
+            "updatedAt": "2026-07-28 22:44"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 5,
+            "hipShot": 8,
+            "controlSpeed": 5,
+            "controlStable": 2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000519,
+          "name": "M1911夜鹰战术枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000519.png",
+          "price": 8573,
+          "priceInfo": {
+            "basePrice": 8427,
+            "yesterdayAvg": 8550,
+            "sevenDayLow": 7913,
+            "sevenDayHigh": 8573,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 3,
+            "recoil": 5
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000591,
+          "name": "短吻鳄枪管组合",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000591.png",
+          "price": 27241,
+          "priceInfo": {
+            "basePrice": 27705,
+            "yesterdayAvg": 32010,
+            "sevenDayLow": 20821,
+            "sevenDayHigh": 41686,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -4,
+            "hipShot": 8,
+            "controlSpeed": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000518,
+          "name": "M7灵蜥短枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000518.png",
+          "price": 28508,
+          "priceInfo": {
+            "basePrice": 26965,
+            "yesterdayAvg": 28217,
+            "sevenDayLow": 23153,
+            "sevenDayHigh": 33863,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 4,
+            "controlSpeed": 6,
+            "controlStable": -6,
+            "hipShot": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000515,
+          "name": "M700猎食军规枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000515.png",
+          "price": 37030,
+          "priceInfo": {
+            "basePrice": 36128,
+            "yesterdayAvg": 37016,
+            "sevenDayLow": 35750,
+            "sevenDayHigh": 37030,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 9,
+            "controlStable": 3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000563,
+          "name": "MK4击剑手枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000563.png",
+          "price": 17920,
+          "priceInfo": {
+            "basePrice": 16848,
+            "yesterdayAvg": 17917,
+            "sevenDayLow": 15350,
+            "sevenDayHigh": 51330,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 10,
+            "controlSpeed": -10,
+            "controlStable": 6,
+            "hipShot": -12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000564,
+          "name": "MK4深空镀铬枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000564.png",
+          "price": 80885,
+          "priceInfo": {
+            "basePrice": 78439,
+            "yesterdayAvg": 83743,
+            "sevenDayLow": 60325,
+            "sevenDayHigh": 129715,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 8,
+            "hipShot": -8,
+            "controlSpeed": -7,
+            "controlStable": 6
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000559,
+          "name": "MK47余烬枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000559.png",
+          "price": 220966,
+          "priceInfo": {
+            "basePrice": 238104,
+            "yesterdayAvg": 226600,
+            "sevenDayLow": 181751,
+            "sevenDayHigh": 274441,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 10,
+            "controlSpeed": -10,
+            "controlStable": 6,
+            "hipShot": -12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000560,
+          "name": "MK47鏖战枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000560.png",
+          "price": 185316,
+          "priceInfo": {
+            "basePrice": 182784,
+            "yesterdayAvg": 185878,
+            "sevenDayLow": 138971,
+            "sevenDayHigh": 199576,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 4,
+            "controlSpeed": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000572,
+          "name": "MCX LT猎手枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000572.png",
+          "price": 25013,
+          "priceInfo": {
+            "basePrice": 24160,
+            "yesterdayAvg": 24982,
+            "sevenDayLow": 23083,
+            "sevenDayHigh": 25013,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 12,
+            "hipShot": -36,
+            "controlSpeed": -7,
+            "controlStable": 5
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000573,
+          "name": "MCX LT焰魂枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000573.png",
+          "price": 37195,
+          "priceInfo": {
+            "basePrice": 36043,
+            "yesterdayAvg": 37169,
+            "sevenDayLow": 34625,
+            "sevenDayHigh": 37195,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 11,
+            "hipShot": -20
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000579,
+          "name": "P90长弓精钢枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 3,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000579.png",
+          "price": 41000,
+          "priceInfo": {
+            "basePrice": 43931,
+            "yesterdayAvg": 36036,
+            "sevenDayLow": 30740,
+            "sevenDayHigh": 51260,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 10,
+            "recoil": 6,
+            "hipShot": -8,
+            "controlSpeed": 2,
+            "controlStable": 2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000568,
+          "name": "MP7月影镀铬枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000568.png",
+          "price": 44543,
+          "priceInfo": {
+            "basePrice": 49214,
+            "yesterdayAvg": 43449,
+            "sevenDayLow": 35618,
+            "sevenDayHigh": 51683,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 3,
+            "controlSpeed": 4,
+            "controlStable": 3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000595,
+          "name": "HVK格斗套件",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000595.png",
+          "price": 42716,
+          "priceInfo": {
+            "basePrice": 57376,
+            "yesterdayAvg": null,
+            "sevenDayLow": 42716,
+            "sevenDayHigh": 80130,
+            "updatedAt": "2026-07-30 00:03"
+          },
+          "stats": {
+            "shotDistancePercent": -8,
+            "recoil": -4,
+            "controlSpeed": 5,
+            "controlStable": 6,
+            "hipShot": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000528,
+          "name": "QSZ92G响尾蛇战术枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 1,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000528.png",
+          "price": 6841,
+          "priceInfo": {
+            "basePrice": 9148,
+            "yesterdayAvg": 7464,
+            "sevenDayLow": 5026,
+            "sevenDayHigh": 18986,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 7,
+            "controlSpeed": -10,
+            "controlStable": 6,
+            "hipShot": -12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000531,
+          "name": "QCQ171新式狡兔短枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000531.png",
+          "price": 66750,
+          "priceInfo": {
+            "basePrice": 68774,
+            "yesterdayAvg": 63944,
+            "sevenDayLow": 43620,
+            "sevenDayHigh": 74460,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 4,
+            "controlSpeed": 6,
+            "controlStable": -6,
+            "hipShot": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000532,
+          "name": "新式红缨战术长枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000532.png",
+          "price": 104032,
+          "priceInfo": {
+            "basePrice": 107497,
+            "yesterdayAvg": 102555,
+            "sevenDayLow": 73192,
+            "sevenDayHigh": 124592,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 7,
+            "controlSpeed": -10,
+            "controlStable": 6,
+            "hipShot": -12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000533,
+          "name": "QCQ171新式渗透一体消音枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000533.png",
+          "price": 122559,
+          "priceInfo": {
+            "basePrice": 107874,
+            "yesterdayAvg": 112949,
+            "sevenDayLow": 76569,
+            "sevenDayHigh": 130224,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 7,
+            "controlSpeed": -3,
+            "controlStable": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000529,
+          "name": "QJB201新式獠牙短枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000529.png",
+          "price": 25630,
+          "priceInfo": {
+            "basePrice": 53974,
+            "yesterdayAvg": 25683,
+            "sevenDayLow": 24345,
+            "sevenDayHigh": 123060,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 4,
+            "controlSpeed": 2,
+            "controlStable": -2,
+            "hipShot": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000530,
+          "name": "QJB201新式重锤战术枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000530.png",
+          "price": 37212,
+          "priceInfo": {
+            "basePrice": 36089,
+            "yesterdayAvg": 37203,
+            "sevenDayLow": 35927,
+            "sevenDayHigh": 37212,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 7,
+            "controlSpeed": -10,
+            "controlStable": 6,
+            "hipShot": -12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000570,
+          "name": "SG552猎犬轻型枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000570.png",
+          "price": 21489,
+          "priceInfo": {
+            "basePrice": 28946,
+            "yesterdayAvg": 21484,
+            "sevenDayLow": 20659,
+            "sevenDayHigh": 33939,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 4,
+            "hipShot": -8,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000601,
+          "name": "RM277重型一体枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000601.png",
+          "price": 30740,
+          "priceInfo": {
+            "basePrice": 28980,
+            "yesterdayAvg": 33073,
+            "sevenDayLow": 28175,
+            "sevenDayHigh": 35870,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 9,
+            "recoil": 6,
+            "controlSpeed": -2,
+            "controlStable": 5,
+            "hipShot": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000602,
+          "name": "RM277鲸鲨枪管组合",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000602.png",
+          "price": 32038,
+          "priceInfo": {
+            "basePrice": 30265,
+            "yesterdayAvg": 32038,
+            "sevenDayLow": 30433,
+            "sevenDayHigh": 32038,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 8,
+            "controlSpeed": -11,
+            "controlStable": 5,
+            "hipShot": -12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000522,
+          "name": "SR-3M铸钢战术枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000522.png",
+          "price": 37043,
+          "priceInfo": {
+            "basePrice": 35954,
+            "yesterdayAvg": 37043,
+            "sevenDayLow": 37043,
+            "sevenDayHigh": 37043,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 6,
+            "recoil": 5
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000523,
+          "name": "SMG45裂变长枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000523.png",
+          "price": 56600,
+          "priceInfo": {
+            "basePrice": 77323,
+            "yesterdayAvg": 60923,
+            "sevenDayLow": 41150,
+            "sevenDayHigh": 81320,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 9,
+            "recoil": 3,
+            "controlSpeed": 1,
+            "controlStable": 1
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000599,
+          "name": "SVCH长枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000599.png",
+          "price": 37427,
+          "priceInfo": {
+            "basePrice": 42262,
+            "yesterdayAvg": 37120,
+            "sevenDayLow": 33857,
+            "sevenDayHigh": 51707,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "recoil": 3,
+            "controlStable": 4,
+            "hipShot": -16,
+            "shotDistancePercent": 15
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000600,
+          "name": "SVCH短枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000600.png",
+          "price": 21338,
+          "priceInfo": {
+            "basePrice": 20063,
+            "yesterdayAvg": 21046,
+            "sevenDayLow": 19553,
+            "sevenDayHigh": 23123,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "recoil": 3,
+            "controlSpeed": 4,
+            "controlStable": -3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000594,
+          "name": "沙漠之鹰镂空竞赛套件",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000594.png",
+          "price": 4594,
+          "priceInfo": {
+            "basePrice": 4320,
+            "yesterdayAvg": 4530,
+            "sevenDayLow": 4259,
+            "sevenDayHigh": 4594,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 9,
+            "controlSpeed": 1,
+            "hipShot": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000513,
+          "name": "新式雪豹短枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000513.png",
+          "price": 27824,
+          "priceInfo": {
+            "basePrice": 27105,
+            "yesterdayAvg": 27818,
+            "sevenDayLow": 26864,
+            "sevenDayHigh": 27824,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 4,
+            "controlSpeed": 6,
+            "controlStable": -6,
+            "hipShot": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000514,
+          "name": "新式蛟龙战术长枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000514.png",
+          "price": 47984,
+          "priceInfo": {
+            "basePrice": 42704,
+            "yesterdayAvg": 38316,
+            "sevenDayLow": 27824,
+            "sevenDayHigh": 67184,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 7,
+            "controlSpeed": -10,
+            "controlStable": 6,
+            "hipShot": -12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13110000104,
+          "name": "复合弓无框瞄具",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13110000104.png",
+          "price": 10754,
+          "priceInfo": {
+            "basePrice": 10303,
+            "yesterdayAvg": 11354,
+            "sevenDayLow": 8179,
+            "sevenDayHigh": 11784,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000556,
+          "name": "杠杆式步枪猎鹿人枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000556.png",
+          "price": 34581,
+          "priceInfo": {
+            "basePrice": 50055,
+            "yesterdayAvg": 31096,
+            "sevenDayLow": 23856,
+            "sevenDayHigh": 59331,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 30,
+            "controlStable": 5,
+            "recoil": 10,
+            "controlSpeed": -6
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000557,
+          "name": "杠杆式步枪拓荒者枪管",
+          "type": "枪管",
+          "typeKey": "accBarrel",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000557.png",
+          "price": 21500,
+          "priceInfo": {
+            "basePrice": 30464,
+            "yesterdayAvg": 21447,
+            "sevenDayLow": 19010,
+            "sevenDayHigh": 33120,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "hipShot": 20,
+            "controlSpeed": 3,
+            "recoil": 8,
+            "controlStable": -6
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
         }
       ]
     },
@@ -18881,6 +20888,189 @@
             "sevenDayLow": 1116,
             "sevenDayHigh": 1716,
             "updatedAt": "2026-08-02 11:24"
+          }
+        },
+        {
+          "id": 13050000381,
+          "name": "FS-12人体工学护木",
+          "type": "护木",
+          "typeKey": "accHandGuard",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13050000381.png",
+          "price": 13071,
+          "priceInfo": {
+            "basePrice": 12720,
+            "yesterdayAvg": 13063,
+            "sevenDayLow": 12566,
+            "sevenDayHigh": 13071,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 1,
+            "hipShot": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13050000338,
+          "name": "M249军规导轨护木",
+          "type": "护木",
+          "typeKey": "accHandGuard",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13050000338.png",
+          "price": 37315,
+          "priceInfo": {
+            "basePrice": 35682,
+            "yesterdayAvg": 33250,
+            "sevenDayLow": 21835,
+            "sevenDayHigh": 37315,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 3,
+            "controlStable": 3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13050000334,
+          "name": "M700军规护木",
+          "type": "护木",
+          "typeKey": "accHandGuard",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13050000334.png",
+          "price": 21968,
+          "priceInfo": {
+            "basePrice": 22697,
+            "yesterdayAvg": 22289,
+            "sevenDayLow": 19763,
+            "sevenDayHigh": 24908,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -6,
+            "controlSpeed": 6
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13050000370,
+          "name": "SR-25主宰者护木",
+          "type": "护木",
+          "typeKey": "accHandGuard",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13050000370.png",
+          "price": 51832,
+          "priceInfo": {
+            "basePrice": 49548,
+            "yesterdayAvg": 51429,
+            "sevenDayLow": 39302,
+            "sevenDayHigh": 51832,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": 2,
+            "hipShot": -8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13050000402,
+          "name": "SVCH短护木",
+          "type": "护木",
+          "typeKey": "accHandGuard",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13050000402.png",
+          "price": 34558,
+          "priceInfo": {
+            "basePrice": 32840,
+            "yesterdayAvg": 31571,
+            "sevenDayLow": 26578,
+            "sevenDayHigh": 53178,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "recoil": 3,
+            "controlSpeed": 5,
+            "hipShot": -8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13050000403,
+          "name": "SVCH一体式护木",
+          "type": "护木",
+          "typeKey": "accHandGuard",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13050000403.png",
+          "price": 47828,
+          "priceInfo": {
+            "basePrice": 44052,
+            "yesterdayAvg": 44475,
+            "sevenDayLow": 43838,
+            "sevenDayHigh": 51818,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "recoil": 3,
+            "controlStable": 6,
+            "controlSpeed": -3,
+            "hipShot": -8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13420000005,
+          "name": "SVCH爆发枪机",
+          "type": "护木",
+          "typeKey": "accHandGuard",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13420000005.png",
+          "price": 32116,
+          "priceInfo": {
+            "basePrice": 31675,
+            "yesterdayAvg": 30629,
+            "sevenDayLow": 25416,
+            "sevenDayHigh": 33456,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "recoil": 2,
+            "hipShot": -8,
+            "controlSpeed": 2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
           }
         }
       ]
@@ -20601,6 +22791,528 @@
             "sevenDayLow": 7267,
             "sevenDayHigh": 7276,
             "updatedAt": "2026-08-02 11:24"
+          }
+        },
+        {
+          "id": 13120000372,
+          "name": "AUG45发扩容弹匣",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 3,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000372.png",
+          "price": 37046,
+          "priceInfo": {
+            "basePrice": 36150,
+            "yesterdayAvg": 37046,
+            "sevenDayLow": 35766,
+            "sevenDayHigh": 37046,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -1,
+            "hipShot": -8,
+            "controlSpeed": -5,
+            "controlStable": -2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000363,
+          "name": "FS-12短弹匣",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 3,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000363.png",
+          "price": 10570,
+          "priceInfo": {
+            "basePrice": 10486,
+            "yesterdayAvg": 10570,
+            "sevenDayLow": 10570,
+            "sevenDayHigh": 10570,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000364,
+          "name": "FS-12加长弹匣",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 3,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000364.png",
+          "price": 15691,
+          "priceInfo": {
+            "basePrice": 15528,
+            "yesterdayAvg": 15687,
+            "sevenDayLow": 15086,
+            "sevenDayHigh": 15691,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -10
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000365,
+          "name": "FS-12扩容弹鼓",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 3,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000365.png",
+          "price": 40232,
+          "priceInfo": {
+            "basePrice": 50214,
+            "yesterdayAvg": 38949,
+            "sevenDayLow": 32182,
+            "sevenDayHigh": 54722,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -20
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000333,
+          "name": "AR 60发扩容弹匣",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 4,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000333.png",
+          "price": 51449,
+          "priceInfo": {
+            "basePrice": 49772,
+            "yesterdayAvg": 50977,
+            "sevenDayLow": 44349,
+            "sevenDayHigh": 51449,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -3,
+            "controlSpeed": -9
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000342,
+          "name": "AR聚合物30发 弹匣",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 2,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000342.png",
+          "price": 6409,
+          "priceInfo": {
+            "basePrice": 6610,
+            "yesterdayAvg": 6535,
+            "sevenDayLow": 5719,
+            "sevenDayHigh": 7099,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlStable": 6
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000340,
+          "name": "霰弹快速装填器",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000340.png",
+          "price": 7563,
+          "priceInfo": {
+            "basePrice": 7386,
+            "yesterdayAvg": 7563,
+            "sevenDayLow": 7233,
+            "sevenDayHigh": 7563,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -2,
+            "controlSpeed": 2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000345,
+          "name": "45发 K437扩容弹匣",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 4,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000345.png",
+          "price": 35399,
+          "priceInfo": {
+            "basePrice": 48383,
+            "yesterdayAvg": 35383,
+            "sevenDayLow": 33629,
+            "sevenDayHigh": 53099,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -5,
+            "controlStable": -2,
+            "hipShot": -8,
+            "recoil": -1
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000348,
+          "name": "K437 60发弹鼓",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 4,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000348.png",
+          "price": 21274,
+          "priceInfo": {
+            "basePrice": 21617,
+            "yesterdayAvg": 21921,
+            "sevenDayLow": 19499,
+            "sevenDayHigh": 24824,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -9,
+            "controlStable": -4,
+            "recoil": -3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000332,
+          "name": "M250 75发弹链",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 2,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000332.png",
+          "price": 180007,
+          "priceInfo": {
+            "basePrice": 51285,
+            "yesterdayAvg": 68290,
+            "sevenDayLow": 51527,
+            "sevenDayHigh": 190687,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": 6
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000334,
+          "name": "M1911 11发扩容弹匣",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000334.png",
+          "price": 4332,
+          "priceInfo": {
+            "basePrice": 4170,
+            "yesterdayAvg": 3990,
+            "sevenDayLow": 3192,
+            "sevenDayHigh": 4332,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000371,
+          "name": "M82扩容弹鼓",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 3,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000371.png",
+          "price": 21274,
+          "priceInfo": {
+            "basePrice": 22551,
+            "yesterdayAvg": 22530,
+            "sevenDayLow": 19499,
+            "sevenDayHigh": 44349,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -1,
+            "hipShot": -8,
+            "controlSpeed": -4,
+            "controlStable": -2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000361,
+          "name": "MK4 48发弹匣",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 4,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000361.png",
+          "price": 33026,
+          "priceInfo": {
+            "basePrice": 34498,
+            "yesterdayAvg": 33135,
+            "sevenDayLow": 25326,
+            "sevenDayHigh": 48426,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -3,
+            "controlSpeed": -5,
+            "controlStable": -2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000359,
+          "name": "MK4730发弹匣",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 3,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000359.png",
+          "price": 51449,
+          "priceInfo": {
+            "basePrice": 49475,
+            "yesterdayAvg": 50648,
+            "sevenDayLow": 40799,
+            "sevenDayHigh": 51449,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -3,
+            "controlSpeed": -3,
+            "controlStable": -1
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000341,
+          "name": "新式45发扩容弹匣",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 4,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000341.png",
+          "price": 46964,
+          "priceInfo": {
+            "basePrice": 54423,
+            "yesterdayAvg": 47791,
+            "sevenDayLow": 38324,
+            "sevenDayHigh": 63284,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -5,
+            "controlStable": -2,
+            "hipShot": -8,
+            "recoil": -1
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000344,
+          "name": "新式75发扩容弹鼓",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 4,
+          "weight": "0",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000344.png",
+          "price": 70084,
+          "priceInfo": {
+            "basePrice": null,
+            "yesterdayAvg": 67417,
+            "sevenDayLow": 53509,
+            "sevenDayHigh": 79009,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -12,
+            "controlStable": -4,
+            "recoil": -3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000343,
+          "name": "5.8新式45发 扩容弹匣",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 3,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000343.png",
+          "price": 35382,
+          "priceInfo": {
+            "basePrice": 40987,
+            "yesterdayAvg": 34554,
+            "sevenDayLow": 30432,
+            "sevenDayHigh": 49407,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -9,
+            "controlStable": -4,
+            "recoil": -3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000378,
+          "name": "SVCH扩容弹匣",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 3,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000378.png",
+          "price": 19931,
+          "priceInfo": {
+            "basePrice": 18871,
+            "yesterdayAvg": 19807,
+            "sevenDayLow": 17261,
+            "sevenDayHigh": 21266,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "controlSpeed": -6
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000379,
+          "name": "SVCH凌风并联弹匣",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 4,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000379.png",
+          "price": 31924,
+          "priceInfo": {
+            "basePrice": 31841,
+            "yesterdayAvg": 31703,
+            "sevenDayLow": 30149,
+            "sevenDayHigh": 44349,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "controlSpeed": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13120000381,
+          "name": "HVK箭匣",
+          "type": "弹匣",
+          "typeKey": "accMagazine",
+          "grade": 1,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13120000381.png",
+          "price": 37046,
+          "priceInfo": {
+            "basePrice": 36250,
+            "yesterdayAvg": 37046,
+            "sevenDayLow": 35766,
+            "sevenDayHigh": 37046,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
           }
         }
       ]
@@ -25239,6 +27951,358 @@
             "sevenDayHigh": 5668,
             "updatedAt": "2026-08-02 11:24"
           }
+        },
+        {
+          "id": 13110000066,
+          "name": "先进热融合全息瞄准镜",
+          "type": "瞄具",
+          "typeKey": "accScope",
+          "grade": 6,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13110000066.png",
+          "price": 56102,
+          "priceInfo": {
+            "basePrice": 52672,
+            "yesterdayAvg": 55229,
+            "sevenDayLow": 51422,
+            "sevenDayHigh": 79502,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -2,
+            "controlStable": -2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13110000067,
+          "name": "先进白热成像战斗瞄准镜",
+          "type": "瞄具",
+          "typeKey": "accScope",
+          "grade": 6,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13110000067.png",
+          "price": 149728,
+          "priceInfo": {
+            "basePrice": 130847,
+            "yesterdayAvg": 146697,
+            "sevenDayLow": 117643,
+            "sevenDayHigh": 160423,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -8,
+            "controlStable": -2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13110000082,
+          "name": "M157火控光学系统",
+          "type": "瞄具",
+          "typeKey": "accScope",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13110000082.png",
+          "price": 57824,
+          "priceInfo": {
+            "basePrice": 55609,
+            "yesterdayAvg": 57824,
+            "sevenDayLow": 55829,
+            "sevenDayHigh": 57824,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -6
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13110000091,
+          "name": "灵眼3/7测距狙击瞄准镜",
+          "type": "瞄具",
+          "typeKey": "accScope",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13110000091.png",
+          "price": 88927,
+          "priceInfo": {
+            "basePrice": 89814,
+            "yesterdayAvg": 86694,
+            "sevenDayLow": 76902,
+            "sevenDayHigh": 100952,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13110000093,
+          "name": "棱镜通用二倍光学瞄具",
+          "type": "瞄具",
+          "typeKey": "accScope",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13110000093.png",
+          "price": 57598,
+          "priceInfo": {
+            "basePrice": 50406,
+            "yesterdayAvg": 54279,
+            "sevenDayLow": 46078,
+            "sevenDayHigh": 61918,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -3,
+            "controlStable": 1
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13110000098,
+          "name": "UHX全息瞄准镜",
+          "type": "瞄具",
+          "typeKey": "accScope",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13110000098.png",
+          "price": 12895,
+          "priceInfo": {
+            "basePrice": 12503,
+            "yesterdayAvg": 12876,
+            "sevenDayLow": 12005,
+            "sevenDayHigh": 12895,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13110000099,
+          "name": "1p33 2/4倍望远镜",
+          "type": "瞄具",
+          "typeKey": "accScope",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13110000099.png",
+          "price": 60743,
+          "priceInfo": {
+            "basePrice": 60447,
+            "yesterdayAvg": 59004,
+            "sevenDayLow": 49823,
+            "sevenDayHigh": 65423,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -6,
+            "controlStable": 2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13110000102,
+          "name": "VMX无框瞄具",
+          "type": "瞄具",
+          "typeKey": "accScope",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13110000102.png",
+          "price": 62134,
+          "priceInfo": {
+            "basePrice": 70994,
+            "yesterdayAvg": 61074,
+            "sevenDayLow": 42114,
+            "sevenDayHigh": 75719,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13210000014,
+          "name": "MEO微型瞄具增高架",
+          "type": "瞄具",
+          "typeKey": "accScope",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13210000014.png",
+          "price": 10314,
+          "priceInfo": {
+            "basePrice": 10384,
+            "yesterdayAvg": 10547,
+            "sevenDayLow": 9574,
+            "sevenDayHigh": 11054,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -1,
+            "controlStable": 2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13110000068,
+          "name": "八倍先进热成像狙击镜",
+          "type": "瞄具",
+          "typeKey": "accScope",
+          "grade": 6,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13110000068.png",
+          "price": 224690,
+          "priceInfo": {
+            "basePrice": 217368,
+            "yesterdayAvg": 213224,
+            "sevenDayLow": 152465,
+            "sevenDayHigh": 232715,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -8,
+            "controlStable": -2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13110000090,
+          "name": "M3狙击镜",
+          "type": "瞄具",
+          "typeKey": "accScope",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13110000090.png",
+          "price": 47522,
+          "priceInfo": {
+            "basePrice": 48779,
+            "yesterdayAvg": 44235,
+            "sevenDayLow": 34672,
+            "sevenDayHigh": 61657,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -8,
+            "controlStable": 3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13110000092,
+          "name": "灵眼6/12测距狙击瞄准镜",
+          "type": "瞄具",
+          "typeKey": "accScope",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13110000092.png",
+          "price": 110832,
+          "priceInfo": {
+            "basePrice": 96849,
+            "yesterdayAvg": 99432,
+            "sevenDayLow": 77092,
+            "sevenDayHigh": 120472,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13110000095,
+          "name": "复合弓智能倍镜",
+          "type": "瞄具",
+          "typeKey": "accScope",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13110000095.png",
+          "price": 26628,
+          "priceInfo": {
+            "basePrice": 26035,
+            "yesterdayAvg": 26626,
+            "sevenDayLow": 25603,
+            "sevenDayHigh": 26628,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "controlStable": 4,
+            "hipShot": -8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13110000096,
+          "name": "杠杆式步枪守望者狙击镜",
+          "type": "瞄具",
+          "typeKey": "accScope",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13110000096.png",
+          "price": 11431,
+          "priceInfo": {
+            "basePrice": 11288,
+            "yesterdayAvg": 11558,
+            "sevenDayLow": 10951,
+            "sevenDayHigh": 11671,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {},
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
         }
       ]
     },
@@ -27024,6 +30088,665 @@
             "sevenDayHigh": 2279,
             "updatedAt": "2026-08-02 11:24"
           }
+        },
+        {
+          "id": 13040000224,
+          "name": "CT增强型后托",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000224.png",
+          "price": 82340,
+          "priceInfo": {
+            "basePrice": 81905,
+            "yesterdayAvg": 78958,
+            "sevenDayLow": 69810,
+            "sevenDayHigh": 93080,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 2,
+            "hipShot": -16,
+            "controlSpeed": 6,
+            "controlStable": 2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000225,
+          "name": "QR高性能后托",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000225.png",
+          "price": 51910,
+          "priceInfo": {
+            "basePrice": 49982,
+            "yesterdayAvg": 51910,
+            "sevenDayLow": 51910,
+            "sevenDayHigh": 51910,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 2,
+            "hipShot": 8,
+            "controlStable": 2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000234,
+          "name": "锚点导轨后托",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000234.png",
+          "price": 37371,
+          "priceInfo": {
+            "basePrice": 36156,
+            "yesterdayAvg": 37371,
+            "sevenDayLow": 36081,
+            "sevenDayHigh": 37371,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 4,
+            "controlSpeed": -2,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000201,
+          "name": "725双管霰弹枪州长短枪托",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000201.png",
+          "price": 18012,
+          "priceInfo": {
+            "basePrice": 17640,
+            "yesterdayAvg": 18012,
+            "sevenDayLow": 18012,
+            "sevenDayHigh": 18012,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -4,
+            "controlSpeed": 10,
+            "controlStable": -4,
+            "hipShot": 16
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000202,
+          "name": "725双管霰弹枪守望者枪托",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000202.png",
+          "price": 18012,
+          "priceInfo": {
+            "basePrice": 17306,
+            "yesterdayAvg": 16920,
+            "sevenDayLow": 14087,
+            "sevenDayHigh": 18012,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 8,
+            "controlSpeed": -6,
+            "controlStable": 6,
+            "hipShot": -8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000194,
+          "name": "AS Val枪托尾盖",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000194.png",
+          "price": 6069,
+          "priceInfo": {
+            "basePrice": 5755,
+            "yesterdayAvg": 6086,
+            "sevenDayLow": 6069,
+            "sevenDayHigh": 7149,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -7,
+            "controlSpeed": 12,
+            "controlStable": -4,
+            "hipShot": 12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13020000603,
+          "name": "HVK双发枪管",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13020000603.png",
+          "price": 46281,
+          "priceInfo": {
+            "basePrice": 43686,
+            "yesterdayAvg": 46438,
+            "sevenDayLow": 38952,
+            "sevenDayHigh": 49846,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 6,
+            "controlSpeed": -2,
+            "hipShot": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000219,
+          "name": "KC17先进战斗枪托",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000219.png",
+          "price": 34217,
+          "priceInfo": {
+            "basePrice": 39602,
+            "yesterdayAvg": 37651,
+            "sevenDayLow": 27217,
+            "sevenDayHigh": 52417,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 5,
+            "hipShot": 8,
+            "controlSpeed": -5,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000233,
+          "name": "AMR-HT镂空枪托",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000233.png",
+          "price": 25760,
+          "priceInfo": {
+            "basePrice": 23226,
+            "yesterdayAvg": 24532,
+            "sevenDayLow": 23610,
+            "sevenDayHigh": 30060,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -2,
+            "hipShot": 8,
+            "controlSpeed": 3,
+            "controlStable": 3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000221,
+          "name": "MK47主宰者后托",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000221.png",
+          "price": 32220,
+          "priceInfo": {
+            "basePrice": 30546,
+            "yesterdayAvg": 38982,
+            "sevenDayLow": 30430,
+            "sevenDayHigh": 51910,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 10,
+            "hipShot": -8,
+            "controlSpeed": 2,
+            "controlStable": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000100,
+          "name": "G3枪托",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000100.png",
+          "price": 19120,
+          "priceInfo": {
+            "basePrice": 20056,
+            "yesterdayAvg": 19222,
+            "sevenDayLow": 17800,
+            "sevenDayHigh": 21760,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 6,
+            "controlSpeed": -6,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000198,
+          "name": "PKM枪托尾盖",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000198.png",
+          "price": 5658,
+          "priceInfo": {
+            "basePrice": 5338,
+            "yesterdayAvg": 5663,
+            "sevenDayLow": 5658,
+            "sevenDayHigh": 5664,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -7,
+            "controlSpeed": 12,
+            "controlStable": -4,
+            "hipShot": 12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000196,
+          "name": "MP7枪托尾盖",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000196.png",
+          "price": 7869,
+          "priceInfo": {
+            "basePrice": 7429,
+            "yesterdayAvg": 7867,
+            "sevenDayLow": 7864,
+            "sevenDayHigh": 7869,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -7,
+            "controlSpeed": 12,
+            "controlStable": -4,
+            "hipShot": 12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000193,
+          "name": "SCAR-H枪托尾盖",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000193.png",
+          "price": 5664,
+          "priceInfo": {
+            "basePrice": 5337,
+            "yesterdayAvg": 5663,
+            "sevenDayLow": 5658,
+            "sevenDayHigh": 5664,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -7,
+            "controlSpeed": 12,
+            "controlStable": -4,
+            "hipShot": 12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13240000009,
+          "name": "RM277托垫",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13240000009.png",
+          "price": 24480,
+          "priceInfo": {
+            "basePrice": 27959,
+            "yesterdayAvg": 18704,
+            "sevenDayLow": 14805,
+            "sevenDayHigh": 34800,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 3,
+            "controlSpeed": 1,
+            "hipShot": -8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13290000006,
+          "name": "RM277托腮板",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13290000006.png",
+          "price": 27639,
+          "priceInfo": {
+            "basePrice": 41379,
+            "yesterdayAvg": 25712,
+            "sevenDayLow": 16029,
+            "sevenDayHigh": 50214,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 1,
+            "controlSpeed": -2,
+            "controlStable": 3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000195,
+          "name": "SR-3M枪托尾盖",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000195.png",
+          "price": 5658,
+          "priceInfo": {
+            "basePrice": 5330,
+            "yesterdayAvg": 5662,
+            "sevenDayLow": 5658,
+            "sevenDayHigh": 5664,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -7,
+            "controlSpeed": 12,
+            "controlStable": -4,
+            "hipShot": 12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000197,
+          "name": "UZI枪托尾盖",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000197.png",
+          "price": 1784,
+          "priceInfo": {
+            "basePrice": 1675,
+            "yesterdayAvg": 1793,
+            "sevenDayLow": 1775,
+            "sevenDayHigh": 1869,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -7,
+            "controlSpeed": 12,
+            "controlStable": -4,
+            "hipShot": 12
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000235,
+          "name": "支点后托",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000235.png",
+          "price": 24839,
+          "priceInfo": {
+            "basePrice": 24973,
+            "yesterdayAvg": 24852,
+            "sevenDayLow": 23064,
+            "sevenDayHigh": 28389,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "recoil": 4,
+            "controlSpeed": 5,
+            "controlStable": -3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000205,
+          "name": "杠杆式步枪骨架枪托",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000205.png",
+          "price": 19310,
+          "priceInfo": {
+            "basePrice": 24164,
+            "yesterdayAvg": 18217,
+            "sevenDayLow": 14935,
+            "sevenDayHigh": 26810,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 4,
+            "hipShot": -8,
+            "controlSpeed": 8,
+            "controlStable": -2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000206,
+          "name": "杠杆式步枪稳固狙击枪托",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000206.png",
+          "price": 18687,
+          "priceInfo": {
+            "basePrice": 24056,
+            "yesterdayAvg": 19372,
+            "sevenDayLow": 16812,
+            "sevenDayHigh": 26812,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 2,
+            "controlSpeed": -2,
+            "controlStable": 6
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000207,
+          "name": "杠杆式步枪无托后握把",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000207.png",
+          "price": 22303,
+          "priceInfo": {
+            "basePrice": 22080,
+            "yesterdayAvg": 22068,
+            "sevenDayLow": 16128,
+            "sevenDayHigh": 23253,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "hipShot": 32,
+            "controlSpeed": -2,
+            "controlStable": -2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000208,
+          "name": "杠杆式步枪运动枪托",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000208.png",
+          "price": 20740,
+          "priceInfo": {
+            "basePrice": 26849,
+            "yesterdayAvg": 21954,
+            "sevenDayLow": 19910,
+            "sevenDayHigh": 32360,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "hipShot": 16,
+            "controlSpeed": 3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13040000209,
+          "name": "杠杆式步枪战锤战术枪托",
+          "type": "枪托",
+          "typeKey": "accStock",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13040000209.png",
+          "price": 21573,
+          "priceInfo": {
+            "basePrice": 21163,
+            "yesterdayAvg": 21387,
+            "sevenDayLow": 19913,
+            "sevenDayHigh": 21573,
+            "updatedAt": "2026-08-02 11:24"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 4,
+            "controlSpeed": -2,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
         }
       ]
     },
@@ -28069,6 +31792,683 @@
             "sevenDayLow": 5628,
             "sevenDayHigh": 5896,
             "updatedAt": "2026-08-02 11:21"
+          }
+        },
+        {
+          "id": 13160000018,
+          "name": "OLIGHT WARRIOR 3S战术手电",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13160000018.png",
+          "price": 71469,
+          "priceInfo": {
+            "basePrice": 67885,
+            "yesterdayAvg": 72883,
+            "sevenDayLow": 66699,
+            "sevenDayHigh": 95319,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -4,
+            "controlStable": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13160000020,
+          "name": "JAD下挂激光",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13160000020.png",
+          "price": 14360,
+          "priceInfo": {
+            "basePrice": 17154,
+            "yesterdayAvg": 14062,
+            "sevenDayLow": 13400,
+            "sevenDayHigh": 18200,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "hipShot": 6,
+            "controlSpeed": 3
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13430000001,
+          "name": "泽宁特拉机柄帽",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13430000001.png",
+          "price": 1767,
+          "priceInfo": {
+            "basePrice": 1664,
+            "yesterdayAvg": 1774,
+            "sevenDayLow": 1767,
+            "sevenDayHigh": 1861,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": 1
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13540000002,
+          "name": "AR重型握把片",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13540000002.png",
+          "price": 48341,
+          "priceInfo": {
+            "basePrice": 46489,
+            "yesterdayAvg": 48301,
+            "sevenDayLow": 46671,
+            "sevenDayHigh": 48341,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 6,
+            "controlSpeed": -6,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13540000003,
+          "name": "AR轻薄握把片",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13540000003.png",
+          "price": 63231,
+          "priceInfo": {
+            "basePrice": 52101,
+            "yesterdayAvg": 56925,
+            "sevenDayLow": 44916,
+            "sevenDayHigh": 76551,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": 2,
+            "controlStable": 2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13250000006,
+          "name": "M1911夜鹰战术扳机",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13250000006.png",
+          "price": 8959,
+          "priceInfo": {
+            "basePrice": 11092,
+            "yesterdayAvg": 8917,
+            "sevenDayLow": 7954,
+            "sevenDayHigh": 12309,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13380000002,
+          "name": "M1911夜鹰战术击锤",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13380000002.png",
+          "price": 8959,
+          "priceInfo": {
+            "basePrice": 8831,
+            "yesterdayAvg": 8907,
+            "sevenDayLow": 7954,
+            "sevenDayHigh": 12309,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlStable": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13170000013,
+          "name": "巨像稳定器",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13170000013.png",
+          "price": 23387,
+          "priceInfo": {
+            "basePrice": 22590,
+            "yesterdayAvg": 23916,
+            "sevenDayLow": 23387,
+            "sevenDayHigh": 31927,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "recoil": 2,
+            "controlSpeed": -4,
+            "controlStable": 2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13410000002,
+          "name": "SUR隔热外罩",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13410000002.png",
+          "price": 15306,
+          "priceInfo": {
+            "basePrice": 14434,
+            "yesterdayAvg": 15090,
+            "sevenDayLow": 14026,
+            "sevenDayHigh": 19146,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "controlStable": -2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13420000002,
+          "name": "QCQ171新式高射速化枪机",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13420000002.png",
+          "price": 74258,
+          "priceInfo": {
+            "basePrice": 72454,
+            "yesterdayAvg": 77044,
+            "sevenDayLow": 50133,
+            "sevenDayHigh": 172328,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": -15,
+            "recoil": -4,
+            "hipShot": -8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13420000003,
+          "name": "QCQ171新式稳固枪机",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13420000003.png",
+          "price": 48203,
+          "priceInfo": {
+            "basePrice": 66590,
+            "yesterdayAvg": 51244,
+            "sevenDayLow": 37588,
+            "sevenDayHigh": 72328,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 12,
+            "controlStable": 2,
+            "recoil": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13170000011,
+          "name": "QJB201脚架",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13170000011.png",
+          "price": 17264,
+          "priceInfo": {
+            "basePrice": 16545,
+            "yesterdayAvg": 17429,
+            "sevenDayLow": 17264,
+            "sevenDayHigh": 18284,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 0,
+            "controlSpeed": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13390000006,
+          "name": "QJB201新式高速导气箍",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13390000006.png",
+          "price": 26973,
+          "priceInfo": {
+            "basePrice": 37958,
+            "yesterdayAvg": 25731,
+            "sevenDayLow": 23113,
+            "sevenDayHigh": 50133,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": -25,
+            "recoil": -8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13390000007,
+          "name": "QJB201新式稳固导气箍",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 3,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13390000007.png",
+          "price": 21368,
+          "priceInfo": {
+            "basePrice": 23757,
+            "yesterdayAvg": 20764,
+            "sevenDayLow": 13243,
+            "sevenDayHigh": 25268,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "controlSpeed": -6
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13390000002,
+          "name": "新式腾龙高速导气箍",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13390000002.png",
+          "price": 50086,
+          "priceInfo": {
+            "basePrice": 45704,
+            "yesterdayAvg": 49211,
+            "sevenDayLow": 42366,
+            "sevenDayHigh": 50086,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": -33,
+            "controlSpeed": -3,
+            "controlStable": -3,
+            "recoil": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13390000003,
+          "name": "新式腾龙稳固导气箍",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13390000003.png",
+          "price": 25043,
+          "priceInfo": {
+            "basePrice": 36145,
+            "yesterdayAvg": 25034,
+            "sevenDayLow": 24078,
+            "sevenDayHigh": 47238,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 15,
+            "recoil": 2,
+            "controlStable": 2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13440000002,
+          "name": "复合弓轻型弓臂",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13440000002.png",
+          "price": 93776,
+          "priceInfo": {
+            "basePrice": 85256,
+            "yesterdayAvg": 110228,
+            "sevenDayLow": 65506,
+            "sevenDayHigh": 141321,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "controlSpeed": 2,
+            "controlStable": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13440000003,
+          "name": "复合弓重型弓臂",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13440000003.png",
+          "price": 78356,
+          "priceInfo": {
+            "basePrice": 121449,
+            "yesterdayAvg": 82042,
+            "sevenDayLow": 56511,
+            "sevenDayHigh": 101486,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "controlStable": 8
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13450000002,
+          "name": "复合弓均衡握把片",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13450000002.png",
+          "price": 18502,
+          "priceInfo": {
+            "basePrice": 17687,
+            "yesterdayAvg": 19581,
+            "sevenDayLow": 13852,
+            "sevenDayHigh": 20052,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "hipShot": -12,
+            "controlSpeed": 4,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13450000003,
+          "name": "复合弓增强握把片",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13450000003.png",
+          "price": 19976,
+          "priceInfo": {
+            "basePrice": 19531,
+            "yesterdayAvg": 19976,
+            "sevenDayLow": 19206,
+            "sevenDayHigh": 19976,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "hipShot": 24,
+            "controlSpeed": -4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13470000002,
+          "name": "复合弓增强弓弦",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13470000002.png",
+          "price": 109252,
+          "priceInfo": {
+            "basePrice": 158287,
+            "yesterdayAvg": 131186,
+            "sevenDayLow": 81532,
+            "sevenDayHigh": 167772,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 30
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13500000002,
+          "name": "复合弓竞赛箭台",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "2",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13500000002.png",
+          "price": 87351,
+          "priceInfo": {
+            "basePrice": 123466,
+            "yesterdayAvg": 105330,
+            "sevenDayLow": 65506,
+            "sevenDayHigh": 138751,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "shotDistancePercent": 30
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13510000001,
+          "name": "复合弓竞赛平衡杆",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13510000001.png",
+          "price": 13505,
+          "priceInfo": {
+            "basePrice": 13279,
+            "yesterdayAvg": 13505,
+            "sevenDayLow": 13505,
+            "sevenDayHigh": 13505,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "hipShot": 8,
+            "controlSpeed": 4,
+            "controlStable": -2
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13510000002,
+          "name": "复合弓稳定平衡杆",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13510000002.png",
+          "price": 13455,
+          "priceInfo": {
+            "basePrice": 13215,
+            "yesterdayAvg": 13455,
+            "sevenDayLow": 13455,
+            "sevenDayHigh": 13455,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {
+            "hipShot": -16,
+            "controlSpeed": 4,
+            "controlStable": 4
+          },
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13520000002,
+          "name": "杠杆式步枪蜂鸟杠杆",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13520000002.png",
+          "price": 20921,
+          "priceInfo": {
+            "basePrice": 22896,
+            "yesterdayAvg": 20441,
+            "sevenDayLow": 14421,
+            "sevenDayHigh": 24421,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {},
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13520000003,
+          "name": "杠杆式步枪犀牛杠杆",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 4,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13520000003.png",
+          "price": 16921,
+          "priceInfo": {
+            "basePrice": 23086,
+            "yesterdayAvg": 18934,
+            "sevenDayLow": 14421,
+            "sevenDayHigh": 24421,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {},
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
+          }
+        },
+        {
+          "id": 13530000001,
+          "name": "杠杆式步枪子弹袋",
+          "type": "功能性配件",
+          "typeKey": "accFunctional",
+          "grade": 2,
+          "weight": "1",
+          "pic": "https://playerhub.df.qq.com/playerhub/60004/object/13530000001.png",
+          "price": 6616,
+          "priceInfo": {
+            "basePrice": 6967,
+            "yesterdayAvg": 6748,
+            "sevenDayLow": 6351,
+            "sevenDayHigh": 7676,
+            "updatedAt": "2026-08-02 11:21"
+          },
+          "stats": {},
+          "effectText": {
+            "advantage": [],
+            "disadvantage": []
           }
         }
       ]
