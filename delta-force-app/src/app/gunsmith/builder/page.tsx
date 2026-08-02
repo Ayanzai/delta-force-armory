@@ -260,8 +260,10 @@ export default function GunsmithBuilderPage() {
       </div>
 
       {gun && gunData ? (
-        <div className="grid grid-cols-1 gap-5 xl:grid-cols-[1fr_0.72fr_0.72fr]">
-          {/* 左：槽位选择表格 */}
+        <div className="grid grid-cols-1 gap-5 xl:grid-cols-[3fr_1fr]">
+          {/* 左列：配置区 */}
+          <div className="space-y-5">
+          {/* 槽位选择表格 */}
           <div className="panel overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -417,8 +419,9 @@ export default function GunsmithBuilderPage() {
               </span>
             </div>
           </div>
+          </div>{/* 左列结束 */}
 
-          {/* 方案列表 */}
+          {/* 右列：方案列表 */}
           <div className="panel overflow-hidden">
             <div className="flex items-center justify-between border-b px-4 py-3" style={{ borderColor: "var(--border)" }}>
               <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-500">改枪方案</h2>
