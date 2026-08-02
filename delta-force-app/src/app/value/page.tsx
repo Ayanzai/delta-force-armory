@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { getData, formatPrice, getGradeColor, getGradeLabel } from "@/lib/data";
+import { isCompatible } from "@/lib/optimizer";
 
 interface ValueItem {
   name: string;
@@ -21,6 +22,9 @@ export default function ValuePage() {
   const [sortBy, setSortBy] = useState("valueScore");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
   const [minPoints, setMinPoints] = useState(1);
+  const [selectedGun, setSelectedGun] = useState(0); // 0 = 全部枪械
+
+  const gun = data.guns.find((g) => g.id === selectedGun);
 
   // 计算所有配件的性价比
   const items = useMemo(() => {
@@ -28,6 +32,8 @@ export default function ValuePage() {
 
     for (const [tk, cat] of Object.entries(data.attachments)) {
       for (const acc of cat.items) {
+        // 枪械过滤：仅显示该枪能装的配件
+        if (gun && !isCompatible(gun, acc.id)) continue;
         const s = acc.stats || {};
 
         // 计算属性点数（排除 hipShot 和 shotDistancePercent）
@@ -53,7 +59,7 @@ export default function ValuePage() {
     }
 
     return result;
-  }, [data, minPoints]);
+  }, [data, minPoints, gun]);
 
   const filtered = useMemo(() => {
     let list = [...items];
@@ -89,6 +95,13 @@ export default function ValuePage() {
 
       {/* 筛选栏 */}
       <div className="flex flex-wrap gap-3 items-center">
+        <select value={selectedGun} onChange={(e) => setSelectedGun(Number(e.target.value))}
+          className="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-sm">
+          <option value={0}>全部枪械</option>
+          {data.guns.map((g) => (
+            <option key={g.id} value={g.id}>{g.name}</option>
+          ))}
+        </select>
         <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}
           className="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-sm">
           <option value="valueScore">性价比</option>
