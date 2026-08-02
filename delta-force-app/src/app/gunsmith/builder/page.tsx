@@ -260,7 +260,7 @@ export default function GunsmithBuilderPage() {
       </div>
 
       {gun && gunData ? (
-        <div className="grid grid-cols-1 gap-5 xl:grid-cols-[1.35fr_1fr]">
+        <div className="grid grid-cols-1 gap-5 xl:grid-cols-[1fr_0.72fr_0.72fr]">
           {/* 左：槽位选择表格 */}
           <div className="panel overflow-hidden">
             <div className="overflow-x-auto">
