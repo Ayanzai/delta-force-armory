@@ -2,11 +2,12 @@
 
 import { useState, useMemo } from "react";
 import { getData, formatPrice } from "@/lib/data";
-import { optimizeGun, getGunSlots, SLOT_NAMES, type OptimizedBuild } from "@/lib/optimizer";
+import { optimizeGun, optimizeForRange, getPossibleRanges, getGunSlots, type OptimizedBuild } from "@/lib/optimizer";
 
 export default function GunsmithPage() {
   const data = getData();
   const [selectedGun, setSelectedGun] = useState<number>(0);
+  const [rangeFilter, setRangeFilter] = useState(0); // 0 = 全部
   const [showTop, setShowTop] = useState(30);
   const [minPoints, setMinPoints] = useState(0);
 
@@ -15,18 +16,23 @@ export default function GunsmithPage() {
   // 当前枪械的槽位（用于表头）
   const slots = useMemo(() => (gun ? getGunSlots(gun, data) : []), [gun, data]);
 
-  // 性价比排行榜
+  // 可能的射程值
+  const possibleRanges = useMemo(() => (gun ? getPossibleRanges(gun, data) : []), [gun, data]);
+
+  // 性价比排行榜（根据射程过滤）
   const ranking = useMemo(() => {
     if (!gun) return [];
+    if (rangeFilter > 0) return optimizeForRange(gun, data, rangeFilter);
     return optimizeGun(gun, data);
-  }, [gun, data]);
+  }, [gun, data, rangeFilter]);
 
   // 过滤 + 截断
   const display = useMemo(() => {
     let list = ranking;
     if (minPoints > 0) list = list.filter((b) => b.totalPoints >= minPoints);
+    if (rangeFilter > 0) list = list.filter((b) => b.totalRange === rangeFilter);
     return list.slice(0, showTop);
-  }, [ranking, showTop, minPoints]);
+  }, [ranking, showTop, minPoints, rangeFilter]);
 
   return (
     <div className="space-y-4">
@@ -39,7 +45,10 @@ export default function GunsmithPage() {
       <div className="flex flex-wrap gap-3 items-center bg-slate-800 rounded-xl p-3">
         <select
           value={selectedGun}
-          onChange={(e) => setSelectedGun(Number(e.target.value))}
+          onChange={(e) => {
+            setSelectedGun(Number(e.target.value));
+            setRangeFilter(0);
+          }}
           className="bg-slate-700 border border-slate-600 rounded-lg px-3 py-2 text-sm w-64"
         >
           <option value={0}>-- 请选择枪械 --</option>
@@ -49,6 +58,21 @@ export default function GunsmithPage() {
             </option>
           ))}
         </select>
+        {possibleRanges.length > 0 && (
+          <label className="text-xs text-slate-400 flex items-center gap-1">
+            射程
+            <select
+              value={rangeFilter}
+              onChange={(e) => setRangeFilter(Number(e.target.value))}
+              className="bg-slate-700 border border-slate-600 rounded px-2 py-1.5 text-sm"
+            >
+              <option value={0}>全部（基础{gun?.stats.shootDistance}）</option>
+              {possibleRanges.map((r) => (
+                <option key={r} value={r}>{r}</option>
+              ))}
+            </select>
+          </label>
+        )}
         <label className="text-xs text-slate-400 flex items-center gap-1">
           最少属性点
           <input
@@ -84,6 +108,7 @@ export default function GunsmithPage() {
                   <th className="text-center p-3">总价</th>
                   <th className="text-center p-3">属性点</th>
                   <th className="text-center p-3 text-yellow-400">性价比</th>
+                  <th className="text-center p-3 text-sky-400">射程</th>
                   {slots.map((s) => (
                     <th key={s.slotKey} className="text-center p-3">{s.slotName}</th>
                   ))}
@@ -92,7 +117,7 @@ export default function GunsmithPage() {
               <tbody>
                 {display.map((build, i) => (
                   <tr
-                    key={build.totalPrice + "-" + build.totalPoints}
+                    key={build.totalPrice + "-" + build.totalPoints + "-" + build.totalRange}
                     className="border-t border-slate-700 hover:bg-slate-700/40 transition"
                   >
                     <td className="p-3 pl-4">
@@ -111,6 +136,10 @@ export default function GunsmithPage() {
                       }`}>
                         {build.valueScore.toFixed(0)}
                       </span>
+                    </td>
+                    <td className="text-center p-3 font-mono text-sky-400">
+                      {build.totalRange}
+                      {build.totalRange > (gun?.stats.shootDistance || 0) && "↑"}
                     </td>
                     {slots.map((s) => {
                       const part = build.parts.find((p) => p.slotKey === s.slotKey);
@@ -135,7 +164,7 @@ export default function GunsmithPage() {
 
           {display.length === 0 && (
             <div className="text-center text-slate-500 py-10 text-sm">
-              没有符合条件的组合，试试调低"最少属性点"
+              没有符合条件的组合，试试调整射程或"最少属性点"
             </div>
           )}
 
@@ -143,7 +172,7 @@ export default function GunsmithPage() {
             <span>
               {gun.name} 共 {ranking.length} 个最优方案（帕累托前沿），当前显示 {display.length} 个
             </span>
-            <span>属性点不含腰射/射程 | 性价比 = 总价 ÷ 总属性点</span>
+            <span>属性点不含腰射/射程 | 性价比 = 总价 ÷ 总属性点 | 射程 = 基础×加成</span>
           </div>
         </>
       ) : (
