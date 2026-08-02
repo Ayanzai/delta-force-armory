@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { getData, formatPrice, getGradeColor } from "@/lib/data";
 import {
-  Crosshair, Fire, Target, Gauge, Speedometer, ShieldCheck, Coin, Check,
+  Crosshair, Fire, Target, Gauge, Speedometer, ShieldCheck, Coin,
 } from "@phosphor-icons/react";
 
 // ============ 类型定义 ============
@@ -238,39 +238,53 @@ export default function GunsmithBuilderPage() {
                           )}
                         </td>
                         <td className="table-cell">
-                          <div className="flex flex-wrap gap-1.5">
+                          <div className="flex flex-wrap gap-2">
                             {candidates.map((part) => {
                               const isSel = selId === part.id;
                               const sum = partSummary(part);
                               const price = priceOf(part.id);
+                              const grade = getGradeColor(gradeNum(part.grade));
                               return (
                                 <button
                                   key={part.id}
                                   onClick={() => setSelected((prev) => ({ ...prev, [slot.id]: isSel ? "" : part.id }))}
-                                  className="group flex items-center gap-1.5 rounded-md px-2 py-1 text-left text-xs transition"
+                                  className="group w-[120px] shrink-0 rounded-lg p-2 text-left transition hover:-translate-y-0.5"
                                   style={{
-                                    border: `1px solid ${isSel ? "var(--accent)" : "var(--border-strong)"}`,
+                                    border: `1px solid ${isSel ? "var(--accent)" : "var(--border)"}`,
                                     background: isSel ? "var(--accent-soft)" : "var(--surface-1)",
+                                    boxShadow: isSel ? "0 0 0 1px var(--accent)" : "none",
                                   }}
                                   title={part.name}
                                 >
-                                  {isSel && <Check size={11} weight="bold" className="text-[var(--accent)]" />}
-                                  <span className="truncate" style={{ maxWidth: 130 }}>{part.name}</span>
-                                  {sum.length > 0 && (
-                                    <span className="text-[10px] font-medium" style={{ color: "var(--green)" }}>
-                                      {sum[0]}
+                                  <div className="flex items-start justify-between">
+                                    <span className="flex h-7 w-7 items-center justify-center rounded"
+                                      style={{ background: "var(--surface-3)" }}>
+                                      <img src={part.iconUrl} alt="" className="h-5 w-5 object-contain" />
                                     </span>
-                                  )}
-                                  <span className="num text-[10px] text-slate-600">{formatPrice(price)}</span>
+                                    <span className="mt-1 h-1.5 w-1.5 rounded-full" style={{ background: grade }} />
+                                  </div>
+                                  <div className="mt-1.5 truncate text-xs font-medium text-slate-200">{part.name}</div>
+                                  <div className="mt-1 min-h-[14px]">
+                                    {sum.length > 0 ? (
+                                      <span className="text-[10px] font-medium" style={{ color: "var(--green)" }}>
+                                        {sum.join(" · ")}
+                                      </span>
+                                    ) : (
+                                      <span className="text-[10px] text-slate-700">无属性加成</span>
+                                    )}
+                                  </div>
+                                  <div className="num mt-1 text-[10px] font-medium" style={{ color: isSel ? "var(--accent)" : "var(--text-dim)" }}>
+                                    {formatPrice(price)}
+                                  </div>
                                 </button>
                               );
                             })}
                             <button
                               onClick={() => setSelected((prev) => ({ ...prev, [slot.id]: "" }))}
-                              className="rounded-md border border-dashed px-2 py-1 text-xs text-slate-600 transition hover:text-slate-400"
+                              className="flex h-[92px] w-[120px] shrink-0 flex-col items-center justify-center gap-1 rounded-lg border border-dashed text-xs text-slate-600 transition hover:text-slate-400"
                               style={{ borderColor: "var(--border-strong)" }}
                             >
-                              空
+                              空槽
                             </button>
                           </div>
                         </td>
