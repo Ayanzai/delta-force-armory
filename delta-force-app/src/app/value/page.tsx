@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { getData, formatPrice, getGradeColor, getGradeLabel } from "@/lib/data";
 import { isCompatible } from "@/lib/optimizer";
 
@@ -15,6 +15,26 @@ interface ValueItem {
   valueScore: number | null; // 价格/属性点，越小越划算
 }
 
+// modifiers → stats 转换（按枪械上下文）
+const ATTR_TO_KEY: Record<string, string> = {
+  "10001": "shotDistancePercent",
+  "10005": "recoil",
+  "10006": "controlSpeed",
+  "10007": "controlStable",
+  "10008": "hipShot",
+};
+
+function modsToStats(mods: any[]): Record<string, number> {
+  const stats: Record<string, number> = {};
+  for (const m of mods || []) {
+    if (m.modifierType !== "Addend" || m.delta == null || m.delta === 0) continue;
+    const key = ATTR_TO_KEY[m.attributeId];
+    if (!key) continue;
+    stats[key] = (stats[key] || 0) + m.delta;
+  }
+  return stats;
+}
+
 export default function ValuePage() {
   const data = getData();
 
@@ -23,8 +43,17 @@ export default function ValuePage() {
   const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
   const [minPoints, setMinPoints] = useState(1);
   const [selectedGun, setSelectedGun] = useState(0); // 0 = 全部枪械
+  const [gunFull, setGunFull] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("/data/gunsmith_full.json")
+      .then((r) => r.json())
+      .then((d) => setGunFull(d))
+      .catch(() => {});
+  }, []);
 
   const gun = data.guns.find((g) => g.id === selectedGun);
+  const gunData = gunFull?.[String(gun?.id || "")];
 
   // 计算所有配件的性价比
   const items = useMemo(() => {
@@ -34,7 +63,9 @@ export default function ValuePage() {
       for (const acc of cat.items) {
         // 枪械过滤：仅显示该枪能装的配件
         if (gun && !isCompatible(gun, acc.id)) continue;
-        const s = acc.stats || {};
+        // 按枪械上下文读取属性：该枪 parts 里该配件的 modifiers（有则用），否则用全局 stats
+        const part = gunData?.parts?.[String(acc.id)];
+        const s = part?.modifiersByMode?.warfare ? modsToStats(part.modifiersByMode.warfare) : (acc.stats || {});
 
         // 计算属性点数（排除 hipShot 和 shotDistancePercent）
         const stats: { key: string; label: string; val: number }[] = [];
@@ -59,7 +90,7 @@ export default function ValuePage() {
     }
 
     return result;
-  }, [data, minPoints, gun]);
+  }, [data, minPoints, gun, gunData]);
 
   const filtered = useMemo(() => {
     let list = [...items];
