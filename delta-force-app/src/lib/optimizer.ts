@@ -14,22 +14,22 @@ export function isCompatible(gun: Gun, accId: number): boolean {
   return compat.allowedPartIds.includes(String(accId));
 }
 
-// ============ 属性点计算（只计正增益，排除腰射 hipShot 和射程 shotDistancePercent）============
+// ============ 属性点计算（净点数 = 正增益 − 负面损失，排除腰射/射程）============
 export function calcPoints(stats: any): number {
   let t = 0;
-  if (stats?.recoil > 0) t += stats.recoil;
-  if (stats?.controlSpeed > 0) t += stats.controlSpeed;
-  if (stats?.controlStable > 0) t += stats.controlStable;
-  if (stats?.extraBullet > 0) t += stats.extraBullet;
+  if (stats?.recoil) t += stats.recoil;
+  if (stats?.controlSpeed) t += stats.controlSpeed;
+  if (stats?.controlStable) t += stats.controlStable;
+  if (stats?.extraBullet) t += stats.extraBullet;
   return t;
 }
 
 export function calcPointsDetail(stats: any): { label: string; val: number }[] {
   const out: { label: string; val: number }[] = [];
-  if (stats?.recoil > 0) out.push({ label: "后坐力", val: stats.recoil });
-  if (stats?.controlSpeed > 0) out.push({ label: "操控速度", val: stats.controlSpeed });
-  if (stats?.controlStable > 0) out.push({ label: "据枪稳定", val: stats.controlStable });
-  if (stats?.extraBullet > 0) out.push({ label: "弹容", val: stats.extraBullet });
+  if (stats?.recoil) out.push({ label: "后坐力", val: stats.recoil });
+  if (stats?.controlSpeed) out.push({ label: "操控速度", val: stats.controlSpeed });
+  if (stats?.controlStable) out.push({ label: "据枪稳定", val: stats.controlStable });
+  if (stats?.extraBullet) out.push({ label: "弹容", val: stats.extraBullet });
   return out;
 }
 
@@ -239,9 +239,9 @@ export function optimizeAdvanced(gun: Gun, data: AllData, opts: ConstraintOption
         id: acc.id,
         price: Math.round(acc.price / GR),
         points: pts,
-        recoil: (s.recoil || 0) > 0 ? s.recoil! : 0,
-        stable: (s.controlStable || 0) > 0 ? s.controlStable! : 0,
-        control: (s.controlSpeed || 0) > 0 ? s.controlSpeed! : 0,
+        recoil: s.recoil || 0,
+        stable: s.controlStable || 0,
+        control: s.controlSpeed || 0,
         rangePct: Math.round(calcRangePercent(s)),
         sel: {},
       });

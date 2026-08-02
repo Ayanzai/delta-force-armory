@@ -32,10 +32,10 @@ export default function ValuePage() {
 
         // 计算属性点数（排除 hipShot 和 shotDistancePercent）
         const stats: { key: string; label: string; val: number }[] = [];
-        if ((s.recoil || 0) > 0) stats.push({ key: "recoil", label: "后坐力", val: s.recoil! });
-        if ((s.controlSpeed || 0) > 0) stats.push({ key: "controlSpeed", label: "操控速度", val: s.controlSpeed! });
-        if ((s.controlStable || 0) > 0) stats.push({ key: "controlStable", label: "据枪稳定", val: s.controlStable! });
-        if ((s.extraBullet || 0) > 0) stats.push({ key: "extraBullet", label: "额外弹容", val: s.extraBullet! });
+        if (s.recoil) stats.push({ key: "recoil", label: "后坐力", val: s.recoil });
+        if (s.controlSpeed) stats.push({ key: "controlSpeed", label: "操控速度", val: s.controlSpeed });
+        if (s.controlStable) stats.push({ key: "controlStable", label: "据枪稳定", val: s.controlStable });
+        if (s.extraBullet) stats.push({ key: "extraBullet", label: "额外弹容", val: s.extraBullet });
 
         const totalPoints = stats.reduce((sum, st) => sum + st.val, 0);
 

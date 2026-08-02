@@ -150,9 +150,9 @@ export default function GunsmithPage() {
                         {(() => {
                           let r = 0, s = 0, ct = 0;
                           for (const p of build.parts) {
-                            r += (p.acc.stats?.recoil || 0) > 0 ? p.acc.stats!.recoil! : 0;
-                            s += (p.acc.stats?.controlStable || 0) > 0 ? p.acc.stats!.controlStable! : 0;
-                            ct += (p.acc.stats?.controlSpeed || 0) > 0 ? p.acc.stats!.controlSpeed! : 0;
+                            r += p.acc.stats?.recoil || 0;
+                            s += p.acc.stats?.controlStable || 0;
+                            ct += p.acc.stats?.controlSpeed || 0;
                           }
                           return (
                             <span>
