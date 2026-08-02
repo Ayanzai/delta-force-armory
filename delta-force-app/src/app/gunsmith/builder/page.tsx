@@ -244,37 +244,27 @@ export default function GunsmithBuilderPage() {
                             {candidates.map((part) => {
                               const isSel = selId === part.id;
                               const sum = partSummary(part);
-                              const price = priceOf(part.id);
                               const grade = getGradeColor(gradeNum(part.grade));
                               return (
                                 <button
                                   key={part.id}
                                   onClick={() => setSelected((prev) => ({ ...prev, [slot.id]: isSel ? "" : part.id }))}
-                                  className="flex items-center gap-2 rounded-md py-1 pl-1.5 pr-2.5 text-left transition hover:brightness-110"
+                                  className="flex shrink-0 items-center gap-1.5 rounded-md py-1 pl-2 pr-2.5 text-left transition hover:brightness-110"
                                   style={{
                                     border: `1px solid ${isSel ? "var(--accent)" : "var(--border)"}`,
                                     background: isSel ? "var(--accent-soft)" : "var(--surface-1)",
                                   }}
                                   title={part.name}
                                 >
-                                  <span className="relative flex h-5 w-5 shrink-0 items-center justify-center rounded"
-                                    style={{ background: "var(--surface-3)" }}>
-                                    <img src={part.iconUrl} alt="" className="h-3.5 w-3.5 object-contain" />
-                                    <span className="absolute -right-0.5 -top-0.5 h-1 w-1 rounded-full"
-                                      style={{ background: grade }} />
+                                  <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: grade }} />
+                                  <span className="truncate text-xs font-medium text-slate-200" style={{ maxWidth: 72 }}>
+                                    {part.name}
                                   </span>
-                                  <span className="min-w-0">
-                                    <span className="block truncate text-xs font-medium text-slate-200" style={{ maxWidth: 64 }}>
-                                      {part.name}
+                                  {sum.length > 0 && (
+                                    <span className="shrink-0 text-[10px]" style={{ color: "var(--green)" }}>
+                                      {sum[0]}
                                     </span>
-                                    <span className="block truncate text-[10px]" style={{ maxWidth: 64 }}>
-                                      {sum.length > 0 ? (
-                                        <span style={{ color: "var(--green)" }}>{sum[0]}</span>
-                                      ) : (
-                                        <span className="text-slate-700">无加成</span>
-                                      )}
-                                    </span>
-                                  </span>
+                                  )}
                                 </button>
                               );
                             })}
