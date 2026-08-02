@@ -244,24 +244,35 @@ export default function GunsmithBuilderPage() {
                             {candidates.map((part) => {
                               const isSel = selId === part.id;
                               const sum = partSummary(part);
+                              const price = priceOf(part.id);
                               const grade = getGradeColor(gradeNum(part.grade));
                               return (
                                 <button
                                   key={part.id}
                                   onClick={() => setSelected((prev) => ({ ...prev, [slot.id]: isSel ? "" : part.id }))}
-                                  className="flex shrink-0 items-center gap-1.5 rounded-md py-1 pl-2 pr-2.5 text-left transition hover:brightness-110"
+                                  className="flex w-[84px] shrink-0 flex-col items-center rounded-lg px-1.5 pb-1.5 pt-2 text-center transition hover:brightness-110"
                                   style={{
                                     border: `1px solid ${isSel ? "var(--accent)" : "var(--border)"}`,
                                     background: isSel ? "var(--accent-soft)" : "var(--surface-1)",
                                   }}
                                   title={part.name}
                                 >
-                                  <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: grade }} />
-                                  <span className="truncate text-xs font-medium text-slate-200" style={{ maxWidth: 72 }}>
+                                  <span className="relative mb-1 flex h-8 w-8 items-center justify-center rounded-md"
+                                    style={{ background: "var(--surface-3)" }}>
+                                    <img src={part.iconUrl} alt="" className="h-6 w-6 object-contain" />
+                                    <span className="absolute -right-0.5 -top-0.5 h-1.5 w-1.5 rounded-full"
+                                      style={{ background: grade }} />
+                                  </span>
+                                  <span className="w-full truncate text-[11px] font-medium leading-tight text-slate-200">
                                     {part.name}
                                   </span>
+                                  <span className="num mt-0.5 w-full truncate text-[10px] leading-tight"
+                                    style={{ color: "var(--accent)" }}>
+                                    {formatPrice(price)}
+                                  </span>
                                   {sum.length > 0 && (
-                                    <span className="shrink-0 text-[10px]" style={{ color: "var(--green)" }}>
+                                    <span className="mt-0.5 w-full truncate text-[10px] leading-tight"
+                                      style={{ color: "var(--green)" }}>
                                       {sum[0]}
                                     </span>
                                   )}
@@ -270,8 +281,8 @@ export default function GunsmithBuilderPage() {
                             })}
                             <button
                               onClick={() => setSelected((prev) => ({ ...prev, [slot.id]: "" }))}
-                              className="flex h-[34px] shrink-0 items-center rounded-md border border-dashed px-2 text-xs text-slate-600 transition hover:text-slate-400"
-                              style={{ borderColor: "var(--border-strong)" }}
+                              className="flex w-[84px] shrink-0 flex-col items-center justify-center gap-1 rounded-lg border border-dashed text-xs text-slate-600 transition hover:text-slate-400"
+                              style={{ borderColor: "var(--border-strong)", height: 88 }}
                             >
                               空槽
                             </button>
