@@ -253,6 +253,7 @@ export default function GunsmithBuilderPage() {
                                   style={{
                                     border: `1px solid ${isSel ? "var(--accent)" : "var(--border)"}`,
                                     background: isSel ? "var(--accent-soft)" : "var(--surface-1)",
+                                    height: 132,
                                   }}
                                   title={part.name}
                                 >
@@ -272,7 +273,7 @@ export default function GunsmithBuilderPage() {
                                     {part.name}
                                   </div>
                                   {sum.length > 0 ? (
-                                    <div style={{ width: "100%", marginTop: 2 }}>
+                                    <div style={{ width: "100%", marginTop: 2, overflow: "hidden", height: 39 }}>
                                       {sum.map((s, si) => (
                                         <div
                                           key={si}
@@ -300,7 +301,7 @@ export default function GunsmithBuilderPage() {
                             <button
                               onClick={() => setSelected((prev) => ({ ...prev, [slot.id]: "" }))}
                               className="flex w-[84px] shrink-0 flex-col items-center justify-center gap-1 rounded-lg border border-dashed text-xs text-slate-600 transition hover:text-slate-400"
-                              style={{ borderColor: "var(--border-strong)", height: 88 }}
+                              style={{ borderColor: "var(--border-strong)", height: 132 }}
                             >
                               空槽
                             </button>
