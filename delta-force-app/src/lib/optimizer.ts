@@ -141,10 +141,11 @@ export function optimizeGun(gun: Gun, data: AllData): OptimizedBuild[] {
       const acc = slot?.items.find((a) => a.id === accId);
       if (acc) parts.push({ slotKey: sk, acc });
     }
+    const actualCost = parts.reduce((sum, p) => sum + (p.acc.price || 0), 0);
     builds.push({
-      totalPrice: state.cost,
+      totalPrice: actualCost,
       totalPoints: state.points,
-      valueScore: state.cost / state.points,
+      valueScore: actualCost / state.points,
       totalRange: calcTotalRange(gun.stats.shootDistance, parts),
       filledSlots: parts.length,
       selection: state.sel,
@@ -290,10 +291,11 @@ export function optimizeAdvanced(gun: Gun, data: AllData, opts: ConstraintOption
         const acc = slot?.items.find((a) => a.id === accId);
         if (acc) parts.push({ slotKey: sk, acc });
       }
+      const actualCost = parts.reduce((sum, p) => sum + (p.acc.price || 0), 0);
       builds.push({
-        totalPrice: c * GR,
+        totalPrice: actualCost,
         totalPoints: st.points,
-        valueScore: st.points > 0 ? (c * GR) / st.points : Infinity,
+        valueScore: st.points > 0 ? actualCost / st.points : Infinity,
         totalRange: calcTotalRange(base, parts),
         filledSlots: parts.length,
         selection: st.sel,
@@ -406,10 +408,11 @@ export function optimizeForRange(gun: Gun, data: AllData, minRange: number): Opt
         const acc = slot?.items.find((a) => a.id === accId);
         if (acc) parts.push({ slotKey: sk, acc });
       }
+      const actualCost = parts.reduce((sum, p) => sum + (p.acc.price || 0), 0);
       builds.push({
-        totalPrice: st.cost,
+        totalPrice: actualCost,
         totalPoints: st.points,
-        valueScore: st.cost / st.points,
+        valueScore: actualCost / st.points,
         totalRange: calcTotalRange(base, parts),
         filledSlots: parts.length,
         selection: st.sel,

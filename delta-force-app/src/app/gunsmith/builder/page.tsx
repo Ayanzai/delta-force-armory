@@ -448,7 +448,7 @@ export default function GunsmithBuilderPage() {
             <div className="flex items-center justify-between border-b px-4 py-3" style={{ borderColor: "var(--border)" }}>
               <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-500">改枪方案</h2>
               <span className="text-xs text-slate-600">{plans.length} 个</span>            </div>
-            <div className="max-h-[420px] overflow-y-auto">
+            <div className="max-h-[calc(100vh-280px)] overflow-y-auto">
               <table className="w-full">
                 <thead>
                   <tr style={{ background: "var(--surface-2)" }}>
