@@ -116,6 +116,7 @@ function extractSlots(gunData: GunData): SlotDef[] {
 export default function GunsmithBuilderPage() {
   const data = getData();
   const [gunFull, setGunFull] = useState<GunFull | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [selectedGun, setSelectedGun] = useState<number>(data.guns[0]?.id || 0);
   const [selected, setSelected] = useState<Record<string, string>>({});
   const mode = "warfare"; // 固定烽火地带模式
@@ -126,9 +127,18 @@ export default function GunsmithBuilderPage() {
 
   useEffect(() => {
     fetch("/data/gunsmith_full.json")
-      .then((r) => r.json())
-      .then((d) => setGunFull(d))
-      .catch((e) => console.error("加载失败:", e));
+      .then((r) => {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then((d) => {
+        setGunFull(d);
+        console.log("gunsmith_full 加载成功:", Object.keys(d).length, "把枪");
+      })
+      .catch((e) => {
+        console.error("加载失败:", e);
+        setLoadError(String(e?.message || e));
+      });
   }, []);
 
   const gun = data.guns.find((g) => g.id === selectedGun);
@@ -230,7 +240,11 @@ export default function GunsmithBuilderPage() {
           </select>
         </div>
         <div className="flex-1" />
-        {!gunFull && <span className="text-xs text-slate-500">数据加载中...</span>}
+        {!gunFull && (
+          <span className="text-xs text-slate-500">
+            {loadError ? `数据加载失败: ${loadError}` : "数据加载中..."}
+          </span>
+        )}
       </div>
 
       {/* 方案过滤 */}
@@ -268,9 +282,9 @@ export default function GunsmithBuilderPage() {
       </div>
 
       {gun && gunData ? (
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-[3fr_1fr]">
+        <div className="flex flex-col gap-5 lg:flex-row lg:items-start">
           {/* 左列：配置区 */}
-          <div className="space-y-5">
+          <div className="flex-1 space-y-5">
           {/* 槽位选择表格 */}
           <div className="panel overflow-hidden">
             <div className="overflow-x-auto">
@@ -430,7 +444,7 @@ export default function GunsmithBuilderPage() {
           </div>{/* 左列结束 */}
 
           {/* 右列：方案列表 */}
-          <div className="panel overflow-hidden">
+          <div className="panel w-full overflow-hidden lg:w-[340px] lg:shrink-0">
             <div className="flex items-center justify-between border-b px-4 py-3" style={{ borderColor: "var(--border)" }}>
               <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-500">改枪方案</h2>
               <span className="text-xs text-slate-600">{plans.length} 个</span>            </div>
