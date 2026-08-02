@@ -1,71 +1,17 @@
 import type { Gun, AllData, Attachment } from "./data";
+import gunAttachments from "./gun_attachments.json";
 
-// ============ 配件兼容性过滤 ============
-// 注意：长前缀在前（SCARH 在 CAR/AR 前，AKM 在 AK 前），避免子串误伤
-const GUN_FAMILIES: Record<string, string[]> = {
-  "K416A8": ["K416"],
-  "K416": ["K416"],
-  "SCARH": ["SCAR-H"],
-  "SMG45": ["SMG-45"],
-  "SR25": ["SR-25"],
-  "SG552": ["SG552"],
-  "M1014": ["M1014"],
-  "AKS-74U": ["AKS-74U"],
-  "AKS74U": ["AKS-74U"],
-  "AKS": ["AKS-74U"],
-  "AKM": ["AKM"],
-  "AK12": ["AK-12"],
-  "AK545": ["AK-12"],
-  "AK762": ["AKM"],
-  "M16A4": ["M16A4"],
-  "M16": ["M16A4"],
-  "M14": ["M14"],
-  "M700": ["M700"],
-  "M249": ["M249"],
-  "M870": ["M870"],
-  "MP5": ["MP5"],
-  "MP7": ["MP7"],
-  "AUG": ["AUG"],
-  "AWM": ["AWM"],
-  "SKS": ["SKS"],
-  "SVD": ["SVD"],
-  "SV98": ["SV-98"],
-  "VSS": ["VSS"],
-  "ASh": ["ASh-12"],
-  "Vector": ["Vector"],
-  "R93": ["R93"],
-  "UZI": ["UZI"],
-  "PKM": ["PKM"],
-  "S12K": ["S12K"],
-  "PSG": ["PSG-1"],
-  "Mini": ["Mini-14"],
-  "P90": ["P90"],
-  "QBZ": ["QBZ95-1"],
-  "G3": ["G3"],
-  "G18": ["G18"],
-  "PTR": ["PTR-32"],
-  "M9": ["G17", "G18", "QSZ92G", "93R"],
-  "霰弹": ["M1014", "S12K", "M870"],
-  "左轮": [".357左轮"],
-  "野牛": ["野牛"],
-  "沙鹰": ["沙漠之鹰"],
-  "勇士": ["勇士"],
-  "93R": ["93R"],
-  "G系": ["G17", "G18", "QSZ92G", "93R"],
-  // 通用前缀（放最后）
-  "AR": ["M4A1", "K416", "M7", "M16A4", "CAR-15"],
-  "AK": ["AK-12", "AKM", "AKS-74U", "PTR-32"],
-  "CAR15": ["CAR-15"],
-  "CAR": ["CAR-15"],
-};
+// ============ 配件兼容性（来自 moligod.com 真实游戏数据）============
+// gun_attachments.json: gunId -> { allowedPartIds: [配件objectID...] }
+const COMPAT = gunAttachments as Record<
+  string,
+  { gunId: string; gunName: string; allowedPartIds: string[]; partNames: Record<string, string> }
+>;
 
-export function isCompatible(gunName: string, accName: string): boolean {
-  for (const [prefix, guns] of Object.entries(GUN_FAMILIES)) {
-    if (accName.includes(prefix)) {
-      return guns.some((g) => gunName.includes(g));
-    }
-  }
-  return true;
+export function isCompatible(gun: Gun, accId: number): boolean {
+  const compat = COMPAT[String(gun.id)];
+  if (!compat) return true; // 无数据时默认兼容
+  return compat.allowedPartIds.includes(String(accId));
 }
 
 // ============ 属性点计算（排除腰射 hipShot 和射程 shotDistancePercent）============
@@ -112,7 +58,7 @@ export function getGunSlots(gun: Gun, data: AllData): SlotOption[] {
   return keys.map((k) => ({
     slotKey: k,
     slotName: SLOT_NAMES[k] || k,
-    items: data.attachments[k]?.items.filter((a) => isCompatible(gun.name, a.name)) || [],
+    items: data.attachments[k]?.items.filter((a) => isCompatible(gun, a.id)) || [],
   }));
 }
 
