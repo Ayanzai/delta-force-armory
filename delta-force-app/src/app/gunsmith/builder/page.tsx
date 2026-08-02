@@ -267,23 +267,29 @@ export default function GunsmithBuilderPage() {
                                     <span className="absolute -right-0.5 -top-0.5 h-1.5 w-1.5 rounded-full"
                                       style={{ background: grade }} />
                                   </span>
-                                  <span className="block w-full truncate text-[11px] font-medium leading-tight text-slate-200">
+                                  <div
+                                    style={{ display: "block", width: "100%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", fontSize: 11, fontWeight: 500, lineHeight: 1.25, color: "#e2e8f0" }}
+                                  >
                                     {part.name}
-                                  </span>
+                                  </div>
                                   {sum.length > 0 ? (
-                                    <span className="mt-0.5 block w-full truncate text-[10px] leading-tight"
-                                      style={{ color: "var(--green)" }}>
+                                    <div
+                                      style={{ display: "block", width: "100%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", fontSize: 10, lineHeight: 1.25, color: "var(--green)", marginTop: 2 }}
+                                    >
                                       {sum[0]}
-                                    </span>
+                                    </div>
                                   ) : (
-                                    <span className="mt-0.5 block w-full truncate text-[10px] leading-tight text-slate-700">
+                                    <div
+                                      style={{ display: "block", width: "100%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", fontSize: 10, lineHeight: 1.25, color: "#4b5563", marginTop: 2 }}
+                                    >
                                       无加成
-                                    </span>
+                                    </div>
                                   )}
-                                  <span className="num mt-0.5 block w-full truncate text-[10px] leading-tight"
-                                    style={{ color: "var(--accent)" }}>
+                                  <div
+                                    style={{ display: "block", width: "100%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", fontSize: 10, lineHeight: 1.25, color: "var(--accent)", marginTop: 2, fontVariantNumeric: "tabular-nums" }}
+                                  >
                                     {formatPrice(price)}
-                                  </span>
+                                  </div>
                                 </button>
                               );
                             })}
