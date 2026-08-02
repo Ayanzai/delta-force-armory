@@ -168,7 +168,153 @@ export function optimizeGun(gun: Gun, data: AllData): OptimizedBuild[] {
   return pareto;
 }
 
-// ============ 射程相关 ============
+// ============ 多约束优化（后坐力/稳定/操控 最低要求）============
+export interface ConstraintOptions {
+  minRange?: number;      // 最低射程
+  minRecoil?: number;     // 最低后坐力控制
+  minStable?: number;     // 最低据枪稳定
+  minControl?: number;    // 最低操控速度
+}
+
+interface MState {
+  points: number;
+  recoil: number;
+  stable: number;
+  control: number;
+  rangePct: number;
+  sel: Record<string, number>;
+}
+
+// 帕累托插入：若 newState 被已有状态支配则丢弃，否则保留并移除被其支配的
+function paretoInsert(states: MState[], ns: MState): void {
+  for (let i = 0; i < states.length; i++) {
+    const s = states[i];
+    const dominated = s.points >= ns.points && s.recoil >= ns.recoil && s.stable >= ns.stable &&
+      s.control >= ns.control && s.rangePct >= ns.rangePct;
+    if (dominated && !(s.points === ns.points && s.recoil === ns.recoil && s.stable === ns.stable &&
+      s.control === ns.control && s.rangePct === ns.rangePct)) {
+      return; // ns 被支配，丢弃
+    }
+  }
+  // 移除被 ns 支配的
+  for (let i = states.length - 1; i >= 0; i--) {
+    const s = states[i];
+    const nsDominated = ns.points >= s.points && ns.recoil >= s.recoil && ns.stable >= s.stable &&
+      ns.control >= s.control && ns.rangePct >= s.rangePct;
+    if (nsDominated && !(ns.points === s.points && ns.recoil === s.recoil && ns.stable === s.stable &&
+      ns.control === s.control && ns.rangePct === s.rangePct)) {
+      states.splice(i, 1);
+    }
+  }
+  states.push(ns);
+}
+
+export function optimizeAdvanced(gun: Gun, data: AllData, opts: ConstraintOptions = {}): OptimizedBuild[] {
+  const slots = getGunSlots(gun, data);
+  if (slots.length === 0) return [];
+  const base = gun.stats.shootDistance;
+  const minRecoil = opts.minRecoil || 0;
+  const minStable = opts.minStable || 0;
+  const minControl = opts.minControl || 0;
+  const needPct = opts.minRange ? Math.max(0, Math.ceil((opts.minRange / base - 1) * 100)) : 0;
+
+  const GR = 2000;           // 粒度放大到 2000，减状态数
+  const NB = MAX_PRICE / GR; // 200 桶
+  const MAX_STATES = 40;     // 每档最多保留 40 个状态
+
+  // dp[c] = 非支配状态集
+  const dp: MState[][] = Array.from({ length: NB + 1 }, () => []);
+  dp[0].push({ points: 0, recoil: 0, stable: 0, control: 0, rangePct: 0, sel: {} });
+
+  for (const slot of slots) {
+    const candidates: (MState & { id: number | null; price: number })[] = [
+      { id: null, price: 0, points: 0, recoil: 0, stable: 0, control: 0, rangePct: 0, sel: {} },
+    ];
+    for (const acc of slot.items) {
+      if (acc.price == null) continue;
+      const s = acc.stats || {};
+      const pts = calcPoints(s);
+      if (pts <= 0) continue;
+      candidates.push({
+        id: acc.id,
+        price: Math.round(acc.price / GR),
+        points: pts,
+        recoil: Math.abs(s.recoil || 0),
+        stable: Math.abs(s.controlStable || 0),
+        control: Math.abs(s.controlSpeed || 0),
+        rangePct: Math.round(calcRangePercent(s)),
+        sel: {},
+      });
+    }
+    if (candidates.length === 1) continue;
+
+    for (let c = NB; c >= 0; c--) {
+      const prevStates = dp[c];
+      if (prevStates.length === 0) continue;
+      for (const prev of prevStates) {
+        for (const cand of candidates) {
+          const nc = c + cand.price;
+          if (nc > NB) continue;
+          const ns: MState = {
+            points: prev.points + cand.points,
+            recoil: prev.recoil + cand.recoil,
+            stable: prev.stable + cand.stable,
+            control: prev.control + cand.control,
+            rangePct: prev.rangePct + cand.rangePct,
+            sel: cand.id === null ? prev.sel : { ...prev.sel, [slot.slotKey]: cand.id },
+          };
+          paretoInsert(dp[nc], ns);
+          // 状态数超限时裁剪（保留点数最高的）
+          if (dp[nc].length > MAX_STATES) {
+            dp[nc].sort((a, b) => b.points - a.points);
+            dp[nc].length = MAX_STATES;
+          }
+        }
+      }
+    }
+  }
+
+  // 收集满足约束的方案
+  const builds: OptimizedBuild[] = [];
+  for (let c = 0; c <= NB; c++) {
+    for (const st of dp[c]) {
+      if (st.points === 0) continue;
+      if (st.rangePct < needPct) continue;
+      if (st.recoil < minRecoil) continue;
+      if (st.stable < minStable) continue;
+      if (st.control < minControl) continue;
+
+      const parts: { slotKey: string; acc: Attachment }[] = [];
+      for (const [sk, accId] of Object.entries(st.sel)) {
+        const slot = slots.find((s) => s.slotKey === sk);
+        const acc = slot?.items.find((a) => a.id === accId);
+        if (acc) parts.push({ slotKey: sk, acc });
+      }
+      builds.push({
+        totalPrice: c * GR,
+        totalPoints: st.points,
+        valueScore: st.points > 0 ? (c * GR) / st.points : Infinity,
+        totalRange: calcTotalRange(base, parts),
+        filledSlots: parts.length,
+        selection: st.sel,
+        parts,
+      });
+    }
+  }
+
+  // 帕累托去重（按价格-点数）
+  builds.sort((a, b) => a.totalPrice - b.totalPrice);
+  const pareto: OptimizedBuild[] = [];
+  let maxPoints = -1;
+  for (const b of builds) {
+    if (b.totalPoints > maxPoints) {
+      pareto.push(b);
+      maxPoints = b.totalPoints;
+    }
+  }
+  pareto.sort((a, b) => a.valueScore - b.valueScore);
+  return pareto;
+}
 
 // 枚举该枪所有可能的射程值（通过枪管/枪口等射程加成配件的组合）
 export function getPossibleRanges(gun: Gun, data: AllData): number[] {

@@ -2,12 +2,15 @@
 
 import { useState, useMemo } from "react";
 import { getData, formatPrice } from "@/lib/data";
-import { optimizeGun, optimizeForRange, getPossibleRanges, getGunSlots, type OptimizedBuild } from "@/lib/optimizer";
+import { optimizeGun, optimizeForRange, optimizeAdvanced, getPossibleRanges, getGunSlots, type OptimizedBuild } from "@/lib/optimizer";
 
 export default function GunsmithPage() {
   const data = getData();
   const [selectedGun, setSelectedGun] = useState<number>(0);
   const [rangeFilter, setRangeFilter] = useState(0); // 0 = 全部
+  const [minRecoil, setMinRecoil] = useState(0);     // 后坐力控制 ≥
+  const [minStable, setMinStable] = useState(0);     // 据枪稳定 ≥
+  const [minControl, setMinControl] = useState(0);   // 操控速度 ≥
   const [showTop, setShowTop] = useState(30);
   const [minPoints, setMinPoints] = useState(0);
 
@@ -19,20 +22,30 @@ export default function GunsmithPage() {
   // 可能的射程值
   const possibleRanges = useMemo(() => (gun ? getPossibleRanges(gun, data) : []), [gun, data]);
 
-  // 性价比排行榜（根据射程过滤）
+  const hasConstraints = minRecoil > 0 || minStable > 0 || minControl > 0;
+
+  // 性价比排行榜（根据射程+属性约束）
   const ranking = useMemo(() => {
     if (!gun) return [];
+    if (hasConstraints) {
+      return optimizeAdvanced(gun, data, {
+        minRange: rangeFilter > 0 ? rangeFilter : undefined,
+        minRecoil: minRecoil > 0 ? minRecoil : undefined,
+        minStable: minStable > 0 ? minStable : undefined,
+        minControl: minControl > 0 ? minControl : undefined,
+      });
+    }
     if (rangeFilter > 0) return optimizeForRange(gun, data, rangeFilter);
     return optimizeGun(gun, data);
-  }, [gun, data, rangeFilter]);
+  }, [gun, data, rangeFilter, minRecoil, minStable, minControl, hasConstraints]);
 
   // 过滤 + 截断
   const display = useMemo(() => {
     let list = ranking;
     if (minPoints > 0) list = list.filter((b) => b.totalPoints >= minPoints);
-    if (rangeFilter > 0) list = list.filter((b) => b.totalRange === rangeFilter);
+    if (rangeFilter > 0 && !hasConstraints) list = list.filter((b) => b.totalRange === rangeFilter);
     return list.slice(0, showTop);
-  }, [ranking, showTop, minPoints, rangeFilter]);
+  }, [ranking, showTop, minPoints, rangeFilter, hasConstraints]);
 
   return (
     <div className="space-y-4">
@@ -74,6 +87,36 @@ export default function GunsmithPage() {
           </label>
         )}
         <label className="text-xs text-slate-400 flex items-center gap-1">
+          后坐力≥
+          <input
+            type="number"
+            value={minRecoil}
+            onChange={(e) => setMinRecoil(Number(e.target.value))}
+            className="bg-slate-700 border border-slate-600 rounded px-2 py-1.5 text-sm w-14 text-center"
+            placeholder="0"
+          />
+        </label>
+        <label className="text-xs text-slate-400 flex items-center gap-1">
+          稳定≥
+          <input
+            type="number"
+            value={minStable}
+            onChange={(e) => setMinStable(Number(e.target.value))}
+            className="bg-slate-700 border border-slate-600 rounded px-2 py-1.5 text-sm w-14 text-center"
+            placeholder="0"
+          />
+        </label>
+        <label className="text-xs text-slate-400 flex items-center gap-1">
+          操控≥
+          <input
+            type="number"
+            value={minControl}
+            onChange={(e) => setMinControl(Number(e.target.value))}
+            className="bg-slate-700 border border-slate-600 rounded px-2 py-1.5 text-sm w-14 text-center"
+            placeholder="0"
+          />
+        </label>
+        <label className="text-xs text-slate-400 flex items-center gap-1">
           最少属性点
           <input
             type="number"
@@ -109,6 +152,7 @@ export default function GunsmithPage() {
                   <th className="text-center p-3">属性点</th>
                   <th className="text-center p-3 text-yellow-400">性价比</th>
                   <th className="text-center p-3 text-sky-400">射程</th>
+                  <th className="text-center p-3">后坐/稳定/操控</th>
                   {slots.map((s) => (
                     <th key={s.slotKey} className="text-center p-3">{s.slotName}</th>
                   ))}
@@ -140,6 +184,25 @@ export default function GunsmithPage() {
                     <td className="text-center p-3 font-mono text-sky-400">
                       {build.totalRange}
                       {build.totalRange > (gun?.stats.shootDistance || 0) && "↑"}
+                    </td>
+                    <td className="text-center p-2 text-[10px]">
+                      {(() => {
+                        let r = 0, s = 0, ct = 0;
+                        for (const p of build.parts) {
+                          r += Math.abs(p.acc.stats?.recoil || 0);
+                          s += Math.abs(p.acc.stats?.controlStable || 0);
+                          ct += Math.abs(p.acc.stats?.controlSpeed || 0);
+                        }
+                        return (
+                          <span className="text-slate-400">
+                            <span className={r >= minRecoil && minRecoil > 0 ? "text-green-400" : ""}>{r}</span>
+                            {" / "}
+                            <span className={s >= minStable && minStable > 0 ? "text-green-400" : ""}>{s}</span>
+                            {" / "}
+                            <span className={ct >= minControl && minControl > 0 ? "text-green-400" : ""}>{ct}</span>
+                          </span>
+                        );
+                      })()}
                     </td>
                     {slots.map((s) => {
                       const part = build.parts.find((p) => p.slotKey === s.slotKey);
