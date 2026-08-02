@@ -3,17 +3,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { getData, formatPrice, getGradeColor } from "@/lib/data";
 import {
-  MagnifyingGlass,
-  X,
-  Check,
-  Plus,
-  Crosshair,
-  Fire,
-  Target,
-  Gauge,
-  Speedometer,
-  ShieldCheck,
-  Coin,
+  Crosshair, Fire, Target, Gauge, Speedometer, ShieldCheck, Coin, Check,
 } from "@phosphor-icons/react";
 
 // ============ 类型定义 ============
@@ -128,8 +118,6 @@ export default function GunsmithBuilderPage() {
   const [selectedGun, setSelectedGun] = useState<number>(0);
   const [mode, setMode] = useState<"warfare" | "operations">("warfare");
   const [selected, setSelected] = useState<Record<string, string>>({});
-  const [activeSlot, setActiveSlot] = useState<SlotDef | null>(null);
-  const [search, setSearch] = useState("");
 
   useEffect(() => {
     fetch("/data/gunsmith_full.json")
@@ -142,18 +130,6 @@ export default function GunsmithBuilderPage() {
   const gunData = gunFull?.[String(gun?.id || "")];
   const slots = useMemo(() => (gunData ? extractSlots(gunData) : []), [gunData]);
   const attrs = useMemo(() => (gunData ? computeAttrs(gunData, selected, mode) : []), [gunData, selected, mode]);
-
-  const activeCandidates = useMemo(() => {
-    if (!activeSlot || !gunData) return [];
-    let list = activeSlot.candidateIds
-      .map((id) => gunData.parts?.[id])
-      .filter((p): p is Part => !!p && !p.isVirtual);
-    if (search) {
-      const q = search.toLowerCase();
-      list = list.filter((p) => p.name.toLowerCase().includes(q));
-    }
-    return list;
-  }, [activeSlot, gunData, search]);
 
   const priceOf = (partId: string): number | null => {
     const numId = parseInt(partId, 10);
@@ -172,16 +148,10 @@ export default function GunsmithBuilderPage() {
       .map((m) => `${m.name}${(m.delta as number) > 0 ? "+" : ""}${m.delta}`);
   };
 
-  function selectPart(slotId: string, partId: string) {
-    setSelected((prev) => ({ ...prev, [slotId]: partId }));
-    setActiveSlot(null);
-    setSearch("");
-  }
-
-  // 总价
-  const totalPrice = useMemo(() => {
-    return Object.values(selected).reduce((sum, pid) => sum + (priceOf(pid) || 0), 0);
-  }, [selected]);
+  const totalPrice = useMemo(
+    () => Object.values(selected).reduce((sum, pid) => sum + (priceOf(pid) || 0), 0),
+    [selected]
+  );
 
   const filledCount = Object.values(selected).filter(Boolean).length;
   const gradeNum = (g: string) => parseInt(g, 10) || 0;
@@ -192,7 +162,7 @@ export default function GunsmithBuilderPage() {
       <div className="flex items-end justify-between">
         <div>
           <h1 className="text-2xl font-bold tracking-tight">改枪配置器</h1>
-          <p className="mt-1 text-sm text-slate-500">选择配件，实时模拟枪械属性变化</p>
+          <p className="mt-1 text-sm text-slate-500">在表格中直接选择配件，右侧实时查看属性变化</p>
         </div>
         <div className="hidden items-center gap-2 text-sm sm:flex">
           <span className="rounded-md px-2.5 py-1" style={{ background: "var(--surface-2)", color: "var(--text-dim)" }}>
@@ -227,9 +197,7 @@ export default function GunsmithBuilderPage() {
             <button
               key={m}
               onClick={() => setMode(m)}
-              className={`rounded px-3 py-1.5 text-[13px] transition ${
-                mode === m ? "text-black" : "text-slate-400 hover:text-white"
-              }`}
+              className={`rounded px-3 py-1.5 text-[13px] transition ${mode === m ? "text-black" : "text-slate-400 hover:text-white"}`}
               style={mode === m ? { background: "var(--accent)" } : {}}
             >
               {m === "warfare" ? "烽火地带" : "全面战场"}
@@ -240,56 +208,87 @@ export default function GunsmithBuilderPage() {
       </div>
 
       {gun && gunData ? (
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-[1.1fr_1fr]">
-          {/* 左栏：槽位选择 */}
-          <div className="panel p-4">
-            <h2 className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-500">配件槽位</h2>
-            <div className="space-y-1.5">
-              {slots.map((slot) => {
-                const selId = selected[slot.id];
-                const selPart = selId ? gunData.parts?.[selId] : null;
-                const price = selPart ? priceOf(selPart.id) : null;
-                return (
-                  <button
-                    key={slot.id + slot.label}
-                    onClick={() => { setActiveSlot(slot); setSearch(""); }}
-                    className="group flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left transition hover:bg-white/4"
-                    style={{ border: "1px solid var(--border)", background: "var(--surface-1)" }}
-                  >
-                    <span className="w-14 shrink-0 text-xs font-medium text-slate-500">{slot.label}</span>
-                    {selPart ? (
-                      <>
-                        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md"
-                          style={{ background: "var(--surface-3)" }}>
-                          <img src={selPart.iconUrl} alt="" className="h-5 w-5 object-contain" />
-                        </span>
-                        <span className="flex-1 truncate text-sm">{selPart.name}</span>
-                        <span className="num shrink-0 text-xs" style={{ color: "var(--accent)" }}>
-                          {formatPrice(price)}
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md"
-                          style={{ background: "var(--surface-2)" }}>
-                          <Plus size={14} className="text-slate-600" />
-                        </span>
-                        <span className="flex-1 text-sm text-slate-600">未安装</span>
-                        <span className="shrink-0 text-slate-600 opacity-0 transition group-hover:opacity-100">
-                          选择
-                        </span>
-                      </>
-                    )}
-                  </button>
-                );
-              })}
-              {slots.length === 0 && (
-                <div className="py-10 text-center text-sm text-slate-600">该枪械暂无槽位数据</div>
-              )}
+        <div className="grid grid-cols-1 gap-5 xl:grid-cols-[1.35fr_1fr]">
+          {/* 左：槽位选择表格 */}
+          <div className="panel overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full" style={{ tableLayout: "fixed" }}>
+                <thead>
+                  <tr style={{ background: "var(--surface-2)" }}>
+                    <th className="table-head w-[100px]">槽位</th>
+                    <th className="table-head">可选配件（点击选择）</th>
+                    <th className="table-head w-[90px] text-right">价格</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {slots.map((slot) => {
+                    const selId = selected[slot.id];
+                    const selPart = selId ? gunData.parts?.[selId] : null;
+                    const candidates = slot.candidateIds
+                      .map((id) => gunData.parts?.[id])
+                      .filter((p): p is Part => !!p && !p.isVirtual);
+                    return (
+                      <tr key={slot.id + slot.label} className="row-hover align-top">
+                        <td className="table-cell">
+                          <div className="text-sm font-medium text-slate-300">{slot.label}</div>
+                          {selPart ? (
+                            <div className="mt-1 text-xs text-slate-500">{selPart.name}</div>
+                          ) : (
+                            <div className="mt-1 text-xs text-slate-700">未安装</div>
+                          )}
+                        </td>
+                        <td className="table-cell">
+                          <div className="flex flex-wrap gap-1.5">
+                            {candidates.map((part) => {
+                              const isSel = selId === part.id;
+                              const sum = partSummary(part);
+                              const price = priceOf(part.id);
+                              return (
+                                <button
+                                  key={part.id}
+                                  onClick={() => setSelected((prev) => ({ ...prev, [slot.id]: isSel ? "" : part.id }))}
+                                  className="group flex items-center gap-1.5 rounded-md px-2 py-1 text-left text-xs transition"
+                                  style={{
+                                    border: `1px solid ${isSel ? "var(--accent)" : "var(--border-strong)"}`,
+                                    background: isSel ? "var(--accent-soft)" : "var(--surface-1)",
+                                  }}
+                                  title={part.name}
+                                >
+                                  {isSel && <Check size={11} weight="bold" className="text-[var(--accent)]" />}
+                                  <span className="truncate" style={{ maxWidth: 130 }}>{part.name}</span>
+                                  {sum.length > 0 && (
+                                    <span className="text-[10px] font-medium" style={{ color: "var(--green)" }}>
+                                      {sum[0]}
+                                    </span>
+                                  )}
+                                  <span className="num text-[10px] text-slate-600">{formatPrice(price)}</span>
+                                </button>
+                              );
+                            })}
+                            <button
+                              onClick={() => setSelected((prev) => ({ ...prev, [slot.id]: "" }))}
+                              className="rounded-md border border-dashed px-2 py-1 text-xs text-slate-600 transition hover:text-slate-400"
+                              style={{ borderColor: "var(--border-strong)" }}
+                            >
+                              空
+                            </button>
+                          </div>
+                        </td>
+                        <td className="table-cell num text-right text-xs" style={{ color: selPart ? "var(--accent)" : "var(--text-faint)" }}>
+                          {selPart ? formatPrice(priceOf(selPart.id)) : "—"}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                  {slots.length === 0 && (
+                    <tr><td className="table-cell py-10 text-center text-sm text-slate-600" colSpan={3}>该枪械暂无槽位数据</td></tr>
+                  )}
+                </tbody>
+              </table>
             </div>
           </div>
 
-          {/* 右栏：属性面板 */}
+          {/* 右：实时属性面板 */}
           <div className="panel p-4">
             <h2 className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-500">枪械属性</h2>
             <div className="space-y-4">
@@ -311,10 +310,7 @@ export default function GunsmithBuilderPage() {
                         <span className="font-bold text-white">{a.final}</span>
                         {changed && (
                           <span className="num ml-2 rounded px-1.5 py-0.5 text-xs font-semibold"
-                            style={{
-                              color: up ? "var(--green)" : "var(--red)",
-                              background: up ? "var(--green-soft)" : "var(--red-soft)",
-                            }}>
+                            style={{ color: up ? "var(--green)" : "var(--red)", background: up ? "var(--green-soft)" : "var(--red-soft)" }}>
                             {a.delta > 0 ? "+" : ""}{a.delta}
                           </span>
                         )}
@@ -347,87 +343,6 @@ export default function GunsmithBuilderPage() {
         <div className="panel flex flex-col items-center justify-center py-24 text-slate-600">
           <Crosshair size={40} weight="thin" className="mb-3 opacity-40" />
           <p className="text-sm">{gun ? "数据加载中..." : "选择一把枪械开始配置"}</p>
-        </div>
-      )}
-
-      {/* 配件选择弹窗 */}
-      {activeSlot && gunData && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
-          onClick={() => setActiveSlot(null)}
-        >
-          <div
-            className="panel flex max-h-[82vh] w-full max-w-lg flex-col overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center justify-between border-b px-4 py-3" style={{ borderColor: "var(--border)" }}>
-              <h3 className="text-sm font-semibold">选择{activeSlot.label}</h3>
-              <button onClick={() => setActiveSlot(null)} className="rounded p-1 text-slate-500 transition hover:bg-white/5 hover:text-white">
-                <X size={16} />
-              </button>
-            </div>
-            <div className="p-3">
-              <div className="relative">
-                <MagnifyingGlass size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
-                <input
-                  type="text"
-                  placeholder="搜索配件..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  className="input w-full py-2 pl-9 pr-3 text-sm"
-                />
-              </div>
-            </div>
-            <div className="flex-1 space-y-1.5 overflow-y-auto px-3 pb-3">
-              <button
-                onClick={() => selectPart(activeSlot.id, "")}
-                className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm text-slate-500 transition hover:bg-white/4"
-                style={{ border: "1px dashed var(--border-strong)" }}
-              >
-                <X size={15} />
-                不安装（空槽）
-              </button>
-              {activeCandidates.map((part) => {
-                const sum = partSummary(part);
-                const price = priceOf(part.id);
-                const grade = getGradeColor(gradeNum(part.grade));
-                return (
-                  <button
-                    key={part.id}
-                    onClick={() => selectPart(activeSlot.id, part.id)}
-                    className="group flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left transition hover:bg-white/4"
-                    style={{ border: "1px solid var(--border)", background: "var(--surface-1)" }}
-                  >
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md"
-                      style={{ background: "var(--surface-3)" }}>
-                      <img src={part.iconUrl} alt="" className="h-6 w-6 object-contain" />
-                    </span>
-                    <span className="flex-1 min-w-0">
-                      <span className="flex items-center gap-2">
-                        <span className="truncate text-sm">{part.name}</span>
-                        <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: grade }} />
-                      </span>
-                      <span className="mt-0.5 flex flex-wrap gap-1">
-                        {sum.map((s, i) => (
-                          <span key={i} className="rounded px-1 text-[10px] font-medium"
-                            style={{ color: "var(--green)", background: "var(--green-soft)" }}>
-                            {s}
-                          </span>
-                        ))}
-                      </span>
-                    </span>
-                    <span className="num shrink-0 text-xs" style={{ color: "var(--accent)" }}>
-                      {formatPrice(price)}
-                    </span>
-                    <Check size={14} className="shrink-0 text-emerald-400 opacity-0 transition group-hover:opacity-100" />
-                  </button>
-                );
-              })}
-              {activeCandidates.length === 0 && (
-                <div className="py-8 text-center text-sm text-slate-600">没有匹配的配件</div>
-              )}
-            </div>
-          </div>
         </div>
       )}
     </div>
