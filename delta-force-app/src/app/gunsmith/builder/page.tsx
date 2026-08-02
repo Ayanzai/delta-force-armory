@@ -301,7 +301,7 @@ export default function GunsmithBuilderPage() {
                             })}
                             <button
                               onClick={() => setSelected((prev) => ({ ...prev, [slot.id]: "" }))}
-                              className="flex w-[84px] shrink-0 flex-col items-center justify-center gap-1 rounded-lg border border-dashed text-xs text-slate-600 transition hover:text-slate-400"
+                              className="flex w-[96px] shrink-0 flex-col items-center justify-center gap-1 rounded-lg border border-dashed text-xs text-slate-600 transition hover:text-slate-400"
                               style={{ borderColor: "var(--border-strong)", height: 132 }}
                             >
                               空槽
