@@ -120,7 +120,7 @@ export default function GunsmithBuilderPage() {
   const [selected, setSelected] = useState<Record<string, string>>({});
   const mode = "warfare"; // 固定烽火地带模式
   const [planRange, setPlanRange] = useState(0); // 方案射程过滤
-  const [planRecoil, setPlanRecoil] = useState(0);
+  const [planRecoil, setPlanRecoil] = useState(10); // 默认后坐力≥10
   const [planStable, setPlanStable] = useState(0);
   const [planControl, setPlanControl] = useState(0);
 
