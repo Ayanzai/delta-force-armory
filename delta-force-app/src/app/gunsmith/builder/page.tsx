@@ -280,7 +280,7 @@ export default function GunsmithBuilderPage() {
                                       {sum.map((s, si) => (
                                         <div
                                           key={si}
-                                          style={{ display: "block", width: "100%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", fontSize: 10, lineHeight: 1.3, color: "var(--green)" }}
+                                          style={{ display: "block", width: "100%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", fontSize: 10, lineHeight: 1.3, color: s.includes("+") ? "var(--red)" : "var(--green)" }}
                                         >
                                           {s}
                                         </div>
@@ -336,7 +336,7 @@ export default function GunsmithBuilderPage() {
                         <span className="font-bold text-white">{a.final}</span>
                         {changed && (
                           <span className="num ml-2 rounded px-1.5 py-0.5 text-xs font-semibold"
-                            style={{ color: up ? "var(--green)" : "var(--red)", background: up ? "var(--green-soft)" : "var(--red-soft)" }}>
+                            style={{ color: up ? "var(--red)" : "var(--green)", background: up ? "var(--red-soft)" : "var(--green-soft)" }}>
                             {a.delta > 0 ? "+" : ""}{a.delta}
                           </span>
                         )}
@@ -347,7 +347,7 @@ export default function GunsmithBuilderPage() {
                         className="h-full rounded-full transition-all duration-300"
                         style={{
                           width: `${pct}%`,
-                          background: up ? "linear-gradient(90deg, #10b981, #34d399)" : "linear-gradient(90deg, #ef4444, #f87171)",
+                          background: up ? "linear-gradient(90deg, #ef4444, #f87171)" : "linear-gradient(90deg, #10b981, #34d399)",
                         }}
                       />
                     </div>

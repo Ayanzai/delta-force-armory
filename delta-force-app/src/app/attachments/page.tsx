@@ -123,7 +123,7 @@ export default function AttachmentsPage() {
                       {statParts.length > 0 ? statParts.map((s, i) => {
                         const isPos = s.includes("+");
                         return (
-                          <span key={i} className={`text-xs px-1.5 py-0.5 rounded ${isPos ? "bg-green-900/50 text-green-400" : "bg-red-900/50 text-red-400"}`}>
+                          <span key={i} className={`text-xs px-1.5 py-0.5 rounded ${isPos ? "bg-red-900/50 text-red-400" : "bg-green-900/50 text-green-400"}`}>
                             {s}
                           </span>
                         );
