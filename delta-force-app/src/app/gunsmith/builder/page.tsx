@@ -270,16 +270,20 @@ export default function GunsmithBuilderPage() {
                                   <span className="w-full truncate text-[11px] font-medium leading-tight text-slate-200">
                                     {part.name}
                                   </span>
-                                  <span className="num mt-0.5 w-full truncate text-[10px] leading-tight"
-                                    style={{ color: "var(--accent)" }}>
-                                    {formatPrice(price)}
-                                  </span>
-                                  {sum.length > 0 && (
+                                  {sum.length > 0 ? (
                                     <span className="mt-0.5 w-full truncate text-[10px] leading-tight"
                                       style={{ color: "var(--green)" }}>
                                       {sum[0]}
                                     </span>
+                                  ) : (
+                                    <span className="mt-0.5 w-full truncate text-[10px] leading-tight text-slate-700">
+                                      无加成
+                                    </span>
                                   )}
+                                  <span className="num mt-0.5 w-full truncate text-[10px] leading-tight"
+                                    style={{ color: "var(--accent)" }}>
+                                    {formatPrice(price)}
+                                  </span>
                                 </button>
                               );
                             })}
