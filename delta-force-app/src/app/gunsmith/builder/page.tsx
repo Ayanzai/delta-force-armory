@@ -255,6 +255,8 @@ export default function GunsmithBuilderPage() {
                                     border: `1px solid ${isSel ? "var(--accent)" : "var(--border)"}`,
                                     background: isSel ? "var(--accent-soft)" : "var(--surface-1)",
                                     height: 132,
+                                    overflow: "hidden",
+                                    boxSizing: "border-box",
                                   }}
                                   title={part.name}
                                 >
@@ -302,7 +304,7 @@ export default function GunsmithBuilderPage() {
                             <button
                               onClick={() => setSelected((prev) => ({ ...prev, [slot.id]: "" }))}
                               className="flex w-[96px] shrink-0 flex-col items-center justify-center gap-1 rounded-lg border border-dashed text-xs text-slate-600 transition hover:text-slate-400"
-                              style={{ borderColor: "var(--border-strong)", height: 132 }}
+                              style={{ borderColor: "var(--border-strong)", height: 132, boxSizing: "border-box" }}
                             >
                               空槽
                             </button>
