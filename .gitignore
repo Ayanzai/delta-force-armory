@@ -8,3 +8,5 @@ delta-force-app/out/
 next-env.d.ts
 data/.kkrb_cookies.txt
 delta-force-app/public/data/*.gz
+delta-force-app/src/lib/gunsmith_full.json
+data/gunsmith_full.json
